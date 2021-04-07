@@ -9,3 +9,37 @@ body{
 .banner-column{
     background-color: #8D8D8D;
 }
+
+.navbar-container{
+    background-color:slategrey;
+}
+
+.about-container{
+    background-color: #84AF9C;
+}
+
+.education-container{
+    background-color: #E1EEC3;
+}
+
+.education-color{
+    background-color: #A8216B;
+}
+
+.education-text-color{
+    color: #A8216B;
+}
+
+.circle{
+    background-color: #494949;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.card-bg{
+    background-color: #494949;
+    width: 150px;
+    height: 75px;
+}
+
