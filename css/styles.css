@@ -27,7 +27,7 @@ body{
 }
 
 .education-text-color{
-    color: #A8216B;
+    color: #494949;
 }
 
 .circle{
@@ -43,3 +43,46 @@ body{
     height: 75px;
 }
 
+.project-container{
+    background-color:slategrey;
+}
+
+.career-container{
+    background-color: rgb(141, 141, 141);
+}
+
+.achiv-container{
+    background-color: rgb(141, 141, 141);
+}
+
+.box{
+    background-color: #494949;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+
+.achiv-text-color{
+    color: rgb(255, 254, 234);
+}
+
+.footer{
+    background-color: #2BB3DD;
+}
+
+.circle-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    font-size: 40px;
+    text-align: center;
+    color: #2BB3DD;
+
+}
+
+.circle-icon:hover{
+    background-color: #474D5D;
+
+}
