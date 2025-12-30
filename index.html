@@ -1,358 +1,2193 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahbub E Sobhani Himel - PhD Application Portfolio</title>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" type="image/png" href="/img/IMG_5697-removebg-preview.png">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="/css/styles.css">
-  <title>Mahbub-E-Sobhani Himel!</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+      :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f9f9f9;
+        --text-primary: #333;
+        --text-secondary: #666;
+        --border-color: #e0e0e0;
+        --link-color: #0066cc;
+        --badge-bg: #0066cc;
+        --success-color: #28a745;
+        --warning-color: #ffc107;
+        --info-color: #17a2b8;
+      }
+      [data-theme="dark"] {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2a2a2a;
+        --text-primary: #e0e0e0;
+        --text-secondary: #b0b0b0;
+        --border-color: #404040;
+        --link-color: #4d9fff;
+        --badge-bg: #4d9fff;
+      }
 
+      * {
+        transition: background-color 0.3s, color 0.3s;
+      }
 
-</head>
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        max-width: 1100px;
+        margin: auto;
+        padding-top: 110px;
+        font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 1.6;
+      }
 
+      /* Navbar Styles */
+      .navbar-custom {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 998;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
 
-<body>
+      [data-theme="dark"] .navbar-custom {
+        background: rgba(26, 26, 26, 0.95);
+      }
 
-  <!-- this is banner section -->
+      .navbar-custom a {
+        color: var(--text-primary);
+        margin-right: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-size: 0.95rem;
+      }
 
-  <section class="banner-container container-fluid">
-    <div class="row vh-100">
-      <div class="col-md-9 banner-column m-auto text-center p-4 border border-light">
-        <h1 class="text-white display-4 font-weight-bolder">Mahbub-E-Sobhani Himel</h1>
-        <h3 class="text-white">Student & Engineer</h3>
+      .navbar-custom a:hover {
+        color: var(--link-color);
+        border-bottom: 2px solid var(--link-color);
+        padding-bottom: 2px;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100%;
+        background: var(--bg-secondary);
+        border-left: 2px solid var(--border-color);
+        padding: 70px 20px;
+        z-index: 999;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+      }
+
+      .mobile-menu.show {
+        right: 0;
+      }
+
+      .mobile-menu a {
+        display: block;
+        margin: 15px 0;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .mobile-menu a:hover {
+        color: var(--link-color);
+        padding-left: 10px;
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--text-primary);
+        transition: 0.3s;
+      }
+
+      .close-menu:hover {
+        color: var(--link-color);
+        transform: rotate(90deg);
+      }
+
+      /* Profile Section */
+      .profile-img {
+        width: 220px;
+        height: 220px;
+        border-radius: 15px;
+        object-fit: cover;
+        border: 4px solid var(--link-color);
+        box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+        transition: all 0.3s;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05) rotateZ(1deg);
+        box-shadow: 0 15px 40px rgba(0, 102, 204, 0.25);
+      }
+
+      /* About Container */
+      .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+      }
+
+      .about-info {
+        width: 70%;
+      }
+
+      .about-img {
+        width: 30%;
+        text-align: center;
+      }
+
+      /* Section Titles */
+      .section-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        border-bottom: 3px solid var(--link-color);
+        padding-bottom: 12px;
+        margin-bottom: 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .section-title i {
+        color: var(--link-color);
+        font-size: 1.8rem;
+      }
+
+      /* PhD Banner */
+      .phd-banner {
+        background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+        color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        margin: 35px 0;
+        box-shadow: 0 8px 25px rgba(0, 102, 204, 0.2);
+        border-left: 6px solid #ffb81c;
+      }
+
+      .phd-banner h3 {
+        color: #fff;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+
+      .phd-banner p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* Research Interest Cards */
+      .research-card {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .research-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--link-color);
+        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
+      }
+
+      .research-card i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .research-card:hover i {
+        transform: scale(1.15) rotateZ(10deg);
+      }
+
+      .research-card h5 {
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--text-primary);
+      }
+
+      .research-card p {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .research-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+
+      /* General Card Styles */
+      .card {
+        border: 1px solid var(--border-color) !important;
+        background: var(--bg-secondary);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-color: var(--link-color);
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      /* Timeline Cards */
+      .timeline-card {
+        border-left: 4px solid var(--link-color);
+        padding-left: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+      }
+
+      .timeline-card:hover {
+        border-left-color: var(--success-color);
+        padding-left: 25px;
+      }
+
+      .timeline-card h5 {
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 5px;
+      }
+
+      .timeline-card .position {
+        color: var(--link-color);
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+      }
+
+      .timeline-card .duration {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 10px;
+      }
+
+      /* Project Cards */
+      .project-card {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--warning-color);
+        box-shadow: 0 10px 25px rgba(255, 193, 7, 0.1);
+      }
+
+      .project-card h6 {
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--text-primary);
+      }
+
+      .project-card .project-agency {
+        font-size: 0.9rem;
+        color: var(--warning-color);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .project-card .project-role {
+        display: inline-block;
+        background: var(--warning-color);
+        color: #333;
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      /* Awards/Achievements */
+      .achievement-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        border-left: 4px solid var(--link-color);
+        transition: all 0.3s;
+      }
+
+      .achievement-item:hover {
+        border-left-color: var(--success-color);
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .achievement-icon {
+        font-size: 1.8rem;
+        flex-shrink: 0;
+      }
+
+      .achievement-content h6 {
+        font-weight: 700;
+        margin-bottom: 3px;
+        color: var(--text-primary);
+      }
+
+      .achievement-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin: 0;
+      }
+
+      /* Publication Styles */
+      .publication {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        padding: 22px;
+        margin-bottom: 22px;
+        transition: all 0.3s ease;
+      }
+
+      .publication:hover {
+        transform: translateX(5px);
+        border-color: var(--link-color);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .pub-badge {
+        background: var(--badge-bg);
+        color: #fff;
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .pub-title {
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin: 12px 0;
+        color: var(--text-primary);
+      }
+
+      .pub-metadata {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+        font-style: italic;
+      }
+
+      .buttons-area {
+        margin-top: 12px;
+      }
+
+      .buttons-area button {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        padding: 6px 16px;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .buttons-area button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Details Section */
+      .details {
+        display: none;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        border-top: 2px dashed var(--border-color);
+        padding-top: 15px;
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .methodology-container {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 15px;
+      }
+
+      .methodology-image {
+        flex: 0 0 35%;
+      }
+
+      .methodology-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid var(--border-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .methodology-text {
+        flex: 0 0 65%;
+      }
+
+      .methodology-label {
+        font-weight: 700;
+        color: var(--link-color);
+        font-size: 0.95rem;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      /* Badges and Pills */
+      .badge {
+        font-weight: 600;
+        padding: 0.5rem 0.9rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        margin: 2px;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 60px;
+        padding: 40px 0;
+        border-top: 2px solid var(--border-color);
+        color: var(--text-secondary);
+        background: var(--bg-secondary);
+        border-radius: 15px 15px 0 0;
+      }
+
+      footer h5 {
+        color: var(--text-primary);
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      footer a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: 0.3s;
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+
+      footer a:hover {
+        color: var(--link-color);
+        padding-left: 5px;
+      }
+
+      footer .social-link {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 1.2rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .navbar-custom a.desktop {
+          display: none;
+        }
+
+        .three-dot {
+          display: block;
+          cursor: pointer;
+          font-size: 1.5rem;
+          margin-left: 10px;
+          color: var(--text-primary);
+        }
+
+        .about-container {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .about-info,
+        .about-img {
+          width: 100% !important;
+          text-align: center;
+        }
+
+        .methodology-container {
+          flex-direction: column;
+        }
+
+        .methodology-image,
+        .methodology-text {
+          flex: 0 0 100% !important;
+        }
+
+        body {
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 80px;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .three-dot {
+          display: none;
+        }
+
+        .mobile-menu {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div
+      class="navbar-custom d-flex align-items-center justify-content-between px-4 py-3"
+    >
+      <div class="fw-bold" style="font-size: 1.1rem; color: var(--link-color)">
+        <i class="fas fa-graduation-cap me-2"></i>Mahbub E Sobhani Himel
       </div>
-
+      <div class="d-flex align-items-center">
+        <a href="#about" class="desktop">About</a>
+        <a href="#education" class="desktop">Education</a>
+        <a href="#experience" class="desktop">Experience</a>
+        <a href="#projects" class="desktop">Projects</a>
+        <a href="#awards" class="desktop">Awards</a>
+        <a href="#publications" class="desktop">Publications</a>
+        <i
+          class="fas fa-moon ms-4"
+          id="theme-icon"
+          style="cursor: pointer; font-size: 1.1rem"
+          onclick="toggleTheme()"
+        ></i>
+        <span class="three-dot"><i class="fas fa-ellipsis-v"></i></span>
+      </div>
     </div>
 
-  </section>
-
-  <!-- navbar section -->
-
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-container sticky-top">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#career-objective">Career Objective</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#project-list">Project List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#achievements">Achievements</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <span class="close-menu" onclick="mobileMenu.classList.remove('show')"
+        >&times;</span
+      >
+      <a href="#about">About</a>
+      <a href="#interests">Research Interests</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Funded Projects</a>
+      <a href="#awards">Awards & Achievements</a>
+      <a href="#publications">Publications</a>
     </div>
-  </nav>
 
-  <!-- this is about section -->
-  <div class="about-container" id="about">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-9 py-5 text-white">
-          <h2>Mahbub-E-Sobhani Himel</h2>
-          <h4>Student & Engineer</h4>
-          <h5 class="text-justify">I am a computer science & engineering student from United International University.
-            Throughout my four
-            years' journey I have learnt a lot of things, but I am very much enthusiastic about machine learning and
-            artificial neural networks. I am also interested in the industry of software development and web development
-            and trying to enhance my skills so that I can be well suited for the job sector. Currently, I am planning of
-            doing multiple research projects in the area of Natural Language Processing. I do like to solve programming
-            problems. I am imaginative, inventive and skilled as well in my favourite areas. I like to participate in
-            sports
-            whenever I have the opportunity, but I love to spend my free time hiking through the mountains and walking
-            around the sea.</h5>
-        </div>
-        <div class="col-md-3 mb-4">
-          <img src="./img/Cp-66697_copy__1_-removebg-preview.png" alt="Himel"
-            class="img-fluid rounded-circle border border-light">
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Header / About Section -->
+    <div class="about-container" id="about">
+      <div class="about-info">
+        <span class="badge bg-primary mb-3">Fall 2026 Applicant</span>
+        <h1 class="fw-bold mb-2" style="font-size: 2.5rem">
+          Mahbub E Sobhani Himel
+        </h1>
+        <h3 class="text-primary fw-bold mb-3">Prospective PhD Candidate</h3>
+        <p class="fst-italic text-secondary mb-4" style="font-size: 1.1rem">
+          "Live and let learn!"
+        </p>
 
-  <!-- career objective -->
-  <div class="career-container py-5" id="career-objective">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col">
-          <h2 class="font-weight-bolder text-white">Career Objective</h2>
-        </div>
-      </div>
-      <div class="row text-white py-2">
-        <h5>I wish to work in an organization that can quench my thirst for knowledge
-          and provide space to learn and gain experience in the field of artificial
-          intelligence and development while being resourceful, innovative and
-          flexible.</h5>
-      </div>
-    </div>
-  </div>
-
-  <!-- this is education section -->
-  <div class="education-container" id="education">
-
-    <div class="container">
-      <div class="row text-center">
-        <div class="col py-5">
-          <h2 class="education-text-color font-weight-bolder">Education</h2>
-        </div>
-      </div>
-      <div class="row py-2 mx-2 align-items-center justify-content-center">
-        <div class="col-md-2 pb-5 mx-4">
-          <div class="circle text-center text-white">
-            <p class="py-5">
-              B. Sc in CSE <br>
-              United International University <br>
-              January, 2017 <br>
-              January, 2021 <br>
-              CGPA: 3.49
-            </p>
+        <div class="d-flex flex-column gap-3 mb-5">
+          <div>
+            <i class="fas fa-briefcase me-3 text-primary"></i>
+            <strong>Lecturer</strong>, Department of CSE, University of Scholars
+          </div>
+          <div>
+            <i class="fas fa-envelope me-3 text-primary"></i>
+            <a
+              href="mailto:msobhani2410011@mscse.uiu.ac.bd"
+              style="color: var(--link-color); text-decoration: none"
+              >msobhani2410011@mscse.uiu.ac.bd</a
+            >
+          </div>
+          <div>
+            <i class="fas fa-phone me-3 text-primary"></i> +880 1521 333309
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt me-3 text-primary"></i> Mirpur,
+            Dhaka, Bangladesh
           </div>
         </div>
 
-
-        <div class="col-md-2 pb-5 mx-4">
-          <div class="circle text-center text-white">
-            <p class="py-5">
-              Dhaka Residential <br>
-              Model College <br>
-              July, 2013 <br>
-              July, 2015 <br>
-              GPA: 5.00
-            </p>
-          </div>
+        <div class="d-flex gap-2 mb-5 flex-wrap">
+          <a
+            href="https://www.linkedin.com/in/mahbub-e-sobhani-himel-38495313a"
+            target="_blank"
+            class="btn btn-outline-primary btn-sm rounded-pill px-4"
+          >
+            <i class="fab fa-linkedin me-2"></i> LinkedIn
+          </a>
+          <a
+            href="https://github.com/mahbubhimel"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm rounded-pill px-4"
+          >
+            <i class="fab fa-github me-2"></i> GitHub
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=ofEJXHQAAAAJ"
+            target="_blank"
+            class="btn btn-outline-info btn-sm rounded-pill px-4"
+          >
+            <i class="fas fa-graduation-cap me-2"></i> Google Scholar
+          </a>
         </div>
-
-        <div class="col-md-2 pb-5 mx-4">
-          <div class="circle text-center text-white">
-            <p class="py-5">
-              Monipur High School <br>
-              and College <br>
-              January, 2003 <br>
-              Apeil, 2013 <br>
-              GPA: 5.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- this is project section -->
-
-  <div class="project-container" id="project-list">
-    <div class="container">
-      <div class="row">
-        <div class="col py-5">
-          <h2 class="text-white text-center font-weight-bolder">Project List</h2>
-        </div>
-      </div>
-      <div class="row py-5">
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">Pirates Den Tour Buddy</p>
-          <a class="text-white" href="https://github.com/mahbubhimel/Pirates-Den-Tour-Buddy" target="_blank">GitHub
-            Link</a>
-        </div>
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">A fighting Game</p>
-          <p class="text-white">Description: A fun fighting game only in single player <br> <br>
-            Tools and Technologies: C, i-graphics</p>
-
-
-        </div>
-
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">Library Management System</p>
-          <p class="text-white">Description: All sorts of books with writer's information and other details. Easy to buy
-            and borrow. <br>
-            <br>
-            Tools and Technologies: C
+        <div
+          class="mt-4 p-3"
+          style="
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border-left: 4px solid var(--link-color);
+          "
+        >
+          <h6 class="fw-bold mb-2">
+            <i class="fas fa-bullseye me-2"></i>Career Objective
+          </h6>
+          <p class="mb-0" style="font-size: 0.95rem">
+            My research is focused on
+            <strong>Large Language Models (LLMs)</strong>,
+            <strong>Multimodal Large Language Models (MLLMs)</strong>,
+            <strong>Mathematical Reasoning</strong>, and general
+            <strong>Artificial Intelligence (AI)</strong> to solve complex
+            problems and advance the field. In my teaching, I want to help
+            students gain the knowledge and skills to use computational
+            techniques for solving real-world problems with creativity and
+            integrity.
           </p>
-
-        </div>
-
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">Medical Management System</p>
-          <p class="text-white">
-            Description: From doctor’s appointment to all other medical stuff along with the medicine inventory system.
-            <br> <br>
-            Tools and Technologies: Java
-          </p>
-        </div>
-
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">Intrusion Detection System Using Convolutional Neural Network</p>
-          <a class="text-white"
-            href="https://github.com/mahbubhimel/Intrusion-Detection-System-Using-Convolutional-Neural-Network"
-            target="_blank">GitHub Link</a>
-        </div>
-
-        <div class="col md-3">
-          <p class="text-white font-weight-bolder">Thesis Title: Sentence Pair Modeling for Current Word Prediction in Bengali Language.
-          </p>
-          <p class="text-white">
-            Description: Context based current word prediction since the current
-            word is incomplete for Bengali Language in less computational cost
-            rather than pre-trained Language Model like BERT.
-          </p>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Achievements section -->
-
-
-
-  <div class="achiv-container" id="achievements">
-
-    <div class="container">
-      <div class="row text-center">
-        <div class="col py-5">
-          <h2 class="achiv-text-color font-weight-bolder">Achievements</h2>
         </div>
       </div>
-      <div class="row py-5">
-        <div class="col-md-2 pb-3 mx-5">
-          <div class="box text-center text-white">
-            <p class="py-5">
-              ICPC Dhaka Regional <br>
-              Preliminary Contest <br>
-              2017
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-2 pb-3 mx-5">
-          <div class="box text-center text-white">
-            <p class="py-5">
-              UIU <br>
-              Coders Combat<br>
-              2018
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-2 pb-3 mx-5">
-          <div class="box text-center text-white">
-            <p class="py-5">
-              ICPC Dhaka Regional <br>
-              Preliminary Contest <br>
-              2019
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-2 pb-3 mx-4">
-          <div class="box text-center text-white">
-            <p class="py-5">
-              Primary Scholarship<br>
-              Examination 2007 <br>
-              Position: Talentpool
-            </p>
-          </div>
-        </div>
-
-
+      <div class="about-img">
+        <img
+          src="my_profile_photo.jpg"
+          class="profile-img"
+          alt="Mahbub E Sobhani Himel"
+        />
+        <p
+          style="
+            color: var(--link-color);
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 0.95rem;
+          "
+        >
+          PhD Applicant | Fall 2026
+        </p>
       </div>
     </div>
 
+    <!-- Research Interests -->
+    <h3 id="research" class="section-title">
+      <i class="fas fa-flask"></i>Research Interests
+    </h3>
+    <div class="research-grid">
+      <div class="research-card">
+        <i class="fas fa-robot text-primary"></i>
+        <h5>Large Language Models</h5>
+        <p>LLM architectures, training, and optimization</p>
+      </div>
+      <div class="research-card">
+        <i class="fas fa-images text-info"></i>
+        <h5>Multimodal LLMs</h5>
+        <p>Vision-language integration and understanding</p>
+      </div>
+      <div class="research-card">
+        <i class="fas fa-square-root-alt text-success"></i>
+        <h5>Mathematical Reasoning</h5>
+        <p>Problem solving and logical inference in AI</p>
+      </div>
+      <div class="research-card">
+        <i class="fas fa-brain text-warning"></i>
+        <h5>Artificial Intelligence</h5>
+        <p>General AI for complex problem solving</p>
+      </div>
+    </div>
 
-    <!-- Contact -->
-
-    <section>
-      <div class="footer" id="contact">
-        <div class="container">
-          <div class="row py-5">
-            <div class="col text-center text-white font-weight-bolder">
-              <em>Contact Details</em> <br>
-              <a href="tel:+880-1521333309" class="text-white">
-                <span>+880-1521333309</span></a> <br>
-              <a href="email:msobhani171134@bscse.uiu.ac.bd" class="text-white">
-                <span>msobhani171134@bscse.uiu.ac.bd</span></a>
-            </div>
+    <!-- Education -->
+    <h2 class="section-title" id="education">
+      <i class="fas fa-graduation-cap"></i> Education
+    </h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row mb-3 pb-3 border-bottom">
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-1">
+              Master of Science in Computer Science & Engineering
+            </h5>
+            <p class="mb-1">
+              <strong>United International University</strong>, Dhaka,
+              Bangladesh
+            </p>
+            <p class="text-secondary mb-0">
+              Focus: Artificial Intelligence & Machine Learning
+            </p>
           </div>
-
-          <div class="row pb-5">
-            <div class="col text-center">
-              <div class="circle-icon">
-                <a href="https://www.facebook.com/sobhanihimel/" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </div>
-
-              <div class="circle-icon">
-                <a href="https://github.com/mahbubhimel" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-
-              <div class="circle-icon">
-                <a href="https://www.linkedin.com/in/mahbub-e-sobhani-himel-38495313a/" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-
-
-
-            </div>
+          <div class="col-md-4 text-md-end">
+            <span class="badge bg-success">CGPA: 3.83/4.00</span>
+            <p class="text-secondary small mt-2">Graduated: 2025</p>
           </div>
-
-          <div class="row">
-            <div class="col text-center">
-              <p>&copy; All Right Reserved to Mahbub-E-Sobhani Himel</p>
-            </div>
+        </div>
+        <div class="row mb-3 pb-3 border-bottom">
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-1">
+              Bachelor of Science in Computer Science & Engineering
+            </h5>
+            <p class="mb-1">
+              <strong>United International University</strong>, Dhaka,
+              Bangladesh
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <span class="badge bg-info">CGPA: 3.49/4.00</span>
+            <p class="text-secondary small mt-2">Graduated: 2021</p>
+          </div>
+        </div>
+        <div class="row mb-3 pb-3 border-bottom">
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-1">Higher Secondary Certificate (HSC)</h5>
+            <p class="mb-0"><strong>Dhaka Residential Model College</strong></p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <span class="badge bg-secondary">GPA: 5.00/5.00</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="fw-bold mb-1">Secondary School Certificate (SSC)</h5>
+            <p class="mb-0"><strong>Monipur High School</strong></p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <span class="badge bg-secondary">GPA: 5.00/5.00</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
+    <!-- Professional Experience -->
+    <h2 class="section-title" id="experience">
+      <i class="fas fa-briefcase"></i> Professional Experience
+    </h2>
+    <div class="mb-5">
+      <div class="timeline-card card border-0 shadow-sm">
+        <div class="card-body">
+          <h5>
+            <i class="fas fa-chalkboard-user me-2 text-primary"></i>Lecturer &
+            Programming Contest Coordinator
+          </h5>
+          <div class="position">University of Scholars</div>
+          <div class="duration">
+            <i class="fas fa-calendar-alt me-2"></i>2024 – Present
+          </div>
+          <p class="text-secondary mb-0">
+            Leading academic courses in Data Structures, Algorithms, and
+            competitive programming. Coordinating programming contests and
+            mentoring students in problem-solving techniques.
+          </p>
+        </div>
+      </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+      <div class="timeline-card card border-0 shadow-sm">
+        <div class="card-body">
+          <h5>
+            <i class="fas fa-flask-vial me-2 text-primary"></i>Research
+            Assistant
+          </h5>
+          <div class="position">BRAC University</div>
+          <div class="duration">
+            <i class="fas fa-calendar-alt me-2"></i>2025 – Present
+          </div>
+          <ul class="text-secondary mb-0 small">
+            <li>
+              Conduct literature reviews on LLMs & VLMs, specializing in
+              mathematical and geometrical reasoning
+            </li>
+            <li>
+              Evaluate and benchmark model performance on geometry-based
+              reasoning tasks
+            </li>
+            <li>
+              Refine research ideas and methodologies under the guidance of
+              Prof. Dr. Swakkhar Shatabda
+            </li>
+            <li>
+              Provide technical mentorship to thesis groups, including code
+              development, debugging, and review
+            </li>
+            <li>
+              Translate academic research into practical insights to advance
+              ongoing AI projects
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <p class="text-secondary mb-0"><strong>Other Positions:</strong></p>
+          <ul class="text-secondary small mt-2 mb-0">
+            <li>Research Assistant, State University of Bangladesh</li>
+            <li>Junior Software Engineer, Orange Solutions LTD</li>
+            <li>Trainee, Bangladesh-Japan ICT Engineers' Training Program</li>
+            <li>Software Engineer Intern, SoftBD</li>
+            <li>Software Engineering Intern, Fronture Technologies Ltd</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-      crossorigin="anonymous"></script>
+    <!-- Funded Projects -->
+    <h2 class="section-title" id="projects">
+      <i class="fas fa-hand-holding-dollar"></i> Funded Projects
+    </h2>
+    <div class="row g-4 mb-5">
+      <div class="col-md-6">
+        <div class="project-card">
+          <div class="project-role">
+            <i class="fas fa-star me-1"></i>Principal Investigator
+          </div>
+          <h6>
+            <i class="fas fa-project-diagram me-2 text-warning"></i
+            >TextEconomizer: Enhancing Lossy Text Compression with Denoising
+            Transformers and Entropy Coding
+          </h6>
+          <div class="project-agency">
+            Information and Communication Technology Division, Government of
+            Bangladesh | 2024-2025
+          </div>
+          <p class="text-secondary small mb-0">
+            <strong>Amount:</strong> BDT 150,000 | M.Sc. Thesis Research
+            focusing on advanced text compression techniques using denoising
+            transformers and entropy coding methods.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <div class="project-role">
+            <i class="fas fa-users me-1"></i>Co-Principal Investigator
+          </div>
+          <h6>
+            <i class="fas fa-project-diagram me-2 text-warning"></i
+            >BanglaHateCorpus: A Large-Scale Bangla Benchmark for Hate Speech
+            Classification and a Transformer-Based Deep Learning Method
+          </h6>
+          <div class="project-agency">
+            Information and Communication Technology Division, Government of
+            Bangladesh | 2023-2024
+          </div>
+          <p class="text-secondary small mb-0">
+            <strong>Amount:</strong> BDT 330,000 | Development of a
+            comprehensive Bangla hate speech detection corpus with
+            transformer-based deep learning methodology.
+          </p>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <!-- Awards & Achievements -->
+    <h2 class="section-title" id="awards">
+      <i class="fas fa-trophy"></i> Awards & Achievements
+    </h2>
+    <div class="mb-5">
+      <!-- Academic Achievements -->
+      <div class="achievement-item">
+        <div class="achievement-icon text-warning">
+          <i class="fas fa-medal"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>Summa Cum Laude / Dean's List</h6>
+          <p>United International University - MSc Program (CGPA: 3.83)</p>
+        </div>
+      </div>
 
+      <div class="achievement-item">
+        <div class="achievement-icon text-success">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>Merit-Based Scholarship</h6>
+          <p>United International University - For Academic Excellence</p>
+        </div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-icon text-info">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>Perfect Academic Records</h6>
+          <p>HSC and SSC with GPA 5.00 - Top 1% performers</p>
+        </div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-icon text-primary">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>Government Board Stipend</h6>
+          <p>2007 - Government Board Stipend in Primary School</p>
+        </div>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-icon text-success">
+          <i class="fas fa-book me-2"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>Research Publications</h6>
+          <p>6+ publications in peer-reviewed conferences and journals</p>
+        </div>
+      </div>
+
+      <!-- Programming Contests -->
+      <div class="achievement-item">
+        <div class="achievement-icon" style="color: #ff6b6b">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="achievement-content">
+          <h6>ICPC Contests</h6>
+          <ul style="margin: 10px 0; font-size: 0.9rem">
+            <li>
+              <strong>2025 ICPC Asia Dhaka Regional:</strong> Ranks 146, 226,
+              231 (Coach and Instructor)
+            </li>
+            <li>
+              <strong>2025 ICPC Asia Dhaka Regional Preliminary:</strong> Ranks
+              39, 42, 80, 881 (Coach and Instructor)
+            </li>
+            <li>
+              <strong>2024 ICPC Asia Dhaka Regional:</strong> Rank 201 (Coach
+              and Instructor)
+            </li>
+            <li>
+              <strong>2019 ICPC Dhaka Regional Preliminary Contest</strong>
+            </li>
+            <li><strong>2018 UIU Coders Combat Programming Contest</strong></li>
+            <li>
+              <strong>2017 ICPC Dhaka Regional Preliminary Contest</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <div class="achievement-item">
+        <div class="achievement-icon" style="color: #ff6b6b">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="achievement-content"></div>
+          <h6>Open Source Contributions</h6>
+          <p>Active contributor to AI/ML projects on GitHub</p>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Publications -->
+    <h2 class="section-title" id="publications">
+      <i class="fas fa-book-open"></i> Publications & Research Work
+    </h2>
+
+    <div class="d-flex gap-4 mb-4 flex-wrap">
+      <label class="form-check-label">
+        <input
+          type="radio"
+          name="filter"
+          checked
+          onclick="filterPubs('all')"
+          class="form-check-input"
+        />
+        All Publications
+      </label>
+      <label class="form-check-label">
+        <input
+          type="radio"
+          name="filter"
+          onclick="filterPubs('conf')"
+          class="form-check-input"
+        />
+        Conference Papers
+      </label>
+      <label class="form-check-label">
+        <input
+          type="radio"
+          name="filter"
+          onclick="filterPubs('journal')"
+          class="form-check-input"
+        />
+        Journal Articles
+      </label>
+    </div>
+
+    <style>
+      .details {
+        display: none;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        border-top: 2px dashed var(--border-color);
+        padding-top: 12px;
+      }
+      .buttons-area button {
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+    </style>
+
+    <script>
+      function showDetails(btn, type) {
+        const pub = btn.closest(".publication");
+        const section = pub.querySelector(".details." + type);
+        const isVisible = section.style.display === "block";
+        pub
+          .querySelectorAll(".details")
+          .forEach((d) => (d.style.display = "none"));
+        if (!isVisible) section.style.display = "block";
+      }
+    </script>
+
+    <!-- Conference Publications -->
+    <div class="publication conf">
+      <span class="pub-badge bg-success">ACL</span>
+      <span class="pub-badge bg-secondary">2025</span>
+      <div class="pub-title">
+        MathMist: A Parallel Multilingual Benchmark Dataset for Mathematical
+        Problem Solving and Reasoning
+      </div>
+      <div class="pub-metadata">ARR October Cycle 2025 | Conference Paper</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Mathematical reasoning remains one of the most challenging domains for
+        large language models (LLMs), requiring not only linguistic
+        understanding but also structured logical deduction and numerical
+        precision. While recent LLMs demonstrate strong general-purpose
+        reasoning abilities, their mathematical competence across diverse
+        languages remains underexplored. Existing benchmarks primarily focus on
+        English or a narrow subset of high-resource languages, leaving
+        significant gaps in assessing multilingual and cross-lingual
+        mathematical reasoning. To address this, we introduce MathMist, a
+        parallel multilingual benchmark for mathematical problem solving and
+        reasoning. MathMist encompasses over 21K aligned question-answer pairs
+        across seven languages, representing a balanced coverage of high-,
+        medium-, and low-resource linguistic settings. The dataset captures
+        linguistic variety, multiple types of problem settings, and solution
+        synthesizing capabilities. We systematically evaluate a diverse suite of
+        models, including open-source small and medium LLMs, proprietary
+        systems, and multilingual-reasoning-focused models, under zero-shot,
+        chain-of-thought (CoT), and code-switched reasoning paradigms. Our
+        results reveal persistent deficiencies in LLMs' ability to perform
+        consistent and interpretable mathematical reasoning across languages,
+        with pronounced degradation in low-resource settings. All the codes and
+        data are available at GitHub: https://github.com/mahbubhimel/MathMist
+      </div>
+      <div class="details bib">
+        <pre>
+@article{sobhani2025mathmist,
+  title={MathMist: A Parallel Multilingual Benchmark Dataset for Mathematical Problem Solving and Reasoning},
+  author={Sobhani, Mahbub E and Sayeedi, Md Faiyaz Abdullah and Mohiuddin, Tasnim and Islam, Md Mofijul and Shatabda, Swakkhar},
+  journal={arXiv preprint arXiv:2510.14305},
+  year={2025}
+}
+      </pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/pdf/2510.14305" target="_blank"
+            >https://arxiv.org/pdf/2510.14305</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="MathMist.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Overview of MATHMIST data creation and evaluation pipeline. (Left)
+              Data Sourcing and corpus creation uses Gemini OCR on textbooks,
+              stores data to JSONL, and applies human verification. (Center)
+              Synthetic data generation encompasses Multiple Choice Question
+              (MCQ) generation, Cross-Lingual Translation, and Solution
+              Perturbation. (Right) The evaluation process tests various LLMs
+              under different prompt settings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication conf">
+      <span class="pub-badge bg-success">ACL</span>
+      <span class="pub-badge bg-secondary">2025</span>
+      <div class="pub-title">
+        Do Multi-Agents Solve Better Than Single? Evaluating Agentic Frameworks
+        for Diagram-Grounded Geometry Problem Solving and Reasoning
+      </div>
+      <div class="pub-metadata">ARR October Cycle 2025 | Conference Paper</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Diagram-grounded geometry problem solving is a critical benchmark for
+        multimodal large language models (MLLMs), yet the benefits of
+        multi-agent design over single-agent remain unclear. We systematically
+        compare single-agent and multi-agent pipelines on four visual math
+        benchmarks: Geometry3K, MathVerse, OlympiadBench, and We-Math. For
+        open-source models, multi-agent consistently improves performance. For
+        example, Qwen-2.5-VL (7B) gains +6.8 points and Qwen-2.5-VL (32B) gains
+        +3.3 on Geometry3K, and both Qwen-2.5-VL variants see further gains on
+        OlympiadBench and We-Math. In contrast, the closed-source
+        Gemini-2.0-Flash generally performs better in single-agent mode on
+        classic benchmarks, while multi-agent yields only modest improvements on
+        the newer We-Math dataset. These findings show that multi-agent
+        pipelines provide clear benefits for open-source models and can assist
+        strong proprietary systems on newer, less familiar benchmarks, but
+        agentic decomposition is not universally optimal. All code, data, and
+        reasoning files are available at
+        https://github.com/faiyazabdullah/Interpreter-Solver
+      </div>
+      <div class="details bib">
+        <pre>
+@article{sobhani2025multi,
+  title={Do Multi-Agents Solve Better Than Single? Evaluating Agentic Frameworks for Diagram-Grounded Geometry Problem Solving and Reasoning},
+  author={Sobhani, Mahbub E and Sayeedi, Md Faiyaz Abdullah and Alam, Mohammad Nehad and Progga, Proma Hossain and Shatabda, Swakkhar},
+  journal={arXiv preprint arXiv:2512.16698},
+  year={2025}
+}
+      </pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/pdf/2512.16698" target="_blank"
+            >https://arxiv.org/pdf/2512.16698</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="interpreter-solver.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              (a) An Interpreter Agent generates formal predicates from images
+              and questions using VLMs. (b) A Solver Agent then solves the
+              problem using these predicates as LLM input.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication conf">
+      <span class="pub-badge bg-success">IJCNLP-AACL</span>
+      <span class="pub-badge bg-secondary">2025</span>
+      <div class="pub-title">
+        CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code
+        Generation
+      </div>
+      <div class="pub-metadata">
+        Bangla Language Processing Workshop 2025 | Conference Paper
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        We propose CodeMist, a hybrid framework for Bangla-to-Python code
+        generation, focusing on enhancing code accuracy through a two-stage
+        pipeline of generation and debugging. In the development phase,
+        standalone models such as TigerLLM and StarCoder achieved low accuracies
+        of 27% and 24%, respectively, while advanced models like
+        Gemini-1.5-flash and Gemma reached 60% and 64%. Pairing Gemma with the
+        GPT-OSS debugger resulted in a substantial improvement to 99.75%,
+        emphasizing the importance of a dedicated debugging stage. In the test
+        phase on unseen data, GPT-OSS alone achieved 67%, which increased to 71%
+        with self-debugging. The highest performance of 84% was achieved by
+        combining Gemini-2.5-flash as the generator with GPT-OSS for debugging.
+        These results demonstrate that integrating a strong generative model
+        with an effective debugging component produces superior and robust code
+        generation outcomes, outperforming existing approaches such as TigerLLM.
+        The full implementation of the framework is publicly available at
+        https://github.com/ fahmid-juboraj/Code_generation.
+      </div>
+      <div class="details bib">
+        <pre>
+@inproceedings{juboraj2025bracucl,
+  title={BRACU_CL at BLP-2025 Task 2: CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code Generation},
+  author={Juboraj, Md. Fahmid-Ul-Alam and Niloy, Soumik Deb and Sobhani, Mahbub E and Sadeque, Farig Yousuf},
+  booktitle={The Second Workshop on Bangla Language Processing (BLP-2025)},
+  pages={},
+  year={2025},
+  note={Accepted}
+}
+      </pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="Accepted but not yet available online." target="_blank"
+            >Accepted but not yet available online.</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="CodeMist.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              (a) A Chain-of-Thought prompt combines a natural-language
+              instruction in Bangla with a function prototype, which is provided
+              to the Generator to produce candidate implementations. (b) A
+              Debugger constructs a Chain-of-Thought prompt with failure
+              details, and debugging LLMs are engaged to iteratively repair and
+              re-evaluate the generated code, where (tick) denotes correct code
+              and (cross) denotes faulty code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="publication conf">
+      <span class="pub-badge bg-success">IEEE</span>
+      <span class="pub-badge bg-secondary">2024</span>
+      <div class="pub-title">
+        An Enhanced Text Compression Approach Using Transformer-based Language
+        Models
+      </div>
+      <div class="pub-metadata">
+        2024 IEEE Region 10 Symposium | Conference Paper
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Text compression shrinks textual data while keeping crucial information,
+        eradicating constraints on storage, bandwidth, and computational
+        efficacy. The integration of lossless compression techniques with
+        transformer-based text decompression has received negligible attention,
+        despite the increasing volume of English text data in communication. The
+        primary barrier in advancing text compression and restoration involves
+        optimizing transformer-based approaches with efficient preprocessing and
+        integrating lossless compression algorithms. We propose a
+        transformer-based method named RejuvenateFormer for text decompression,
+        addressing prior issues by harnessing a new preprocessing technique and
+        a lossless compression method. Our meticulous pre-processing technique
+        incorporating the Lempel-Ziv-Welch algorithm achieves compression ratios
+        of 12.57, 13.38, and 11.42 on the BookCorpus, EN-DE, and EN-FR corpora,
+        thus showing state-of-the-art compression ratios compared to other deep
+        learning and traditional approaches.
+      </div>
+      <div class="details bib">
+        <pre>
+@inproceedings{rahman2024enhanced,
+  title={An Enhanced Text Compression Approach Using Transformer-based Language Models},
+  author={Rahman, Chowdhury Mofizur and Sobhani, Mahbub E and Rodela, Anika Tasnim and Shatabda, Swakkhar},
+  booktitle={2024 IEEE Region 10 Symposium (TENSYMP)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
+}</pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/pdf/2412.15250" target="_blank"
+            >https://arxiv.org/pdf/2412.15250</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="RejuvenateFormer.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              (Top) Each corpus undergoes vowel removal, and the compression
+              ratio is calculated using the compressed representation. The text
+              is then reverted to its earliest form without vowels. (Bottom)
+              After tokenization, the RejuvenateFormer is trained on each
+              corpus, to proficiently generate expected outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication conf">
+      <span class="pub-badge bg-success">EMNLP</span>
+      <span class="pub-badge bg-secondary">2023</span>
+      <div class="pub-title">
+        Advancing bangla punctuation restoration by a monolingual
+        transformer-based method and a large-scale corpus
+      </div>
+      <div class="pub-metadata">
+        Bangla Language Processing Workshop 2023 | Conference Paper
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Punctuation restoration is the endeavor of reinstating and rectifying
+        missing or improper punctuation marks within a text, thereby eradicating
+        ambiguity in written discourse. The Bangla punctuation restoration task
+        has received little attention and exploration, despitethe rising
+        popularity of textual communication in the language. The primary
+        hindrances in the advancement of the task revolve aroundthe utilization
+        of transformer-based methods and an openly accessible extensive corpus,
+        challenges that we discovered remainedunresolved in earlier efforts. In
+        this study, we propose a baseline by introducing a mono-lingual
+        transformer-based method named Jatikarok, where the effectiveness of
+        transfer learning has been meticulously scrutinized, and a large-scale
+        corpus containing 1.48M source-target pairs to resolve the previous
+        issues. The Jatikarok attains accuracy rates of 95.2%, 85.13%, and
+        91.36% on the BanglaPRCorpus, Prothom-Alo Balanced, and BanglaOPUS
+        corpora, thereby establishing itself as the state-of-the-art method
+        through its superior performance compared to BanglaT5 and T5-Small.
+        Jatikarok and BanglaPRCorpus are publicly available at:
+        https://github.com/mehedihasanbijoy/Jatikarok-and-BanglaPRCorpus
+      </div>
+      <div class="details bib">
+        <pre>
+@inproceedings{bijoy2023advancing,
+  title={Advancing Bangla Punctuation Restoration by a Monolingual Transformer-Based Method and a Large-Scale Corpus},
+  author={Bijoy, Mehedi Hasan and Faria, Mir Fatema Afroz and Sobhani, Mahbub E and Ferdoush, Tanzid and Shatabda, Swakkhar},
+  booktitle={The First Workshop on Bangla Language Processing (BLP-2023)},
+  pages={18},
+  year={2023}
+}</pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a
+            href="https://aclanthology.org/2023.banglalp-1.3.pdf"
+            target="_blank"
+            >https://aclanthology.org/2023.banglalp-1.3.pdf</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="Jatikarok.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              (Top) Jatikarok is initially trained on the Bangla Grammatical
+              Error Correction (BGEC) task. (Middle) The insights acquired
+              during the BGEC training are preserved for subsequent knowledge
+              transfer to the Bangla Punctuation Restoration (BPR) task.
+              (Bottom) Jatikarok is then fine-tuned on BPR corpora, leveraging
+              the knowledge gleaned from the BGEC task.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- under review conferences -->
+    <div class="publication conf">
+      <span class="pub-badge bg-primary">ACL</span>
+      <span class="pub-badge bg-secondary">Under Review</span>
+      <div class="pub-title">
+        BanglaVerse: A Benchmark Dataset for Visual Understanding of
+        Multilingual Vision-Language Models in Bangla with Cultural Awareness.
+      </div>
+      <div class="pub-metadata">
+        ARR October Cycle 2025 | Conference Paper | Under Review
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">Abstract</div>
+      <div class="details bib">
+        <!-- <pre>
+@inproceedings{juboraj2025bracucl,
+  title={BRACU_CL at BLP-2025 Task 2: CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code Generation},
+  author={Juboraj, Md. Fahmid-Ul-Alam and Niloy, Soumik Deb and Sobhani, Mahbub E and Sadeque, Farig Yousuf},
+  booktitle={The Second Workshop on Bangla Language Processing (BLP-2025)},
+  pages={},
+  year={2025},
+  note={Accepted}
+}
+      </pre
+        > -->
+      </div>
+      <div class="details paper">
+        <!-- <p>
+          <strong>Paper Link:</strong>
+          <a href="Accepted but not yet available online." target="_blank"
+            >Accepted but not yet available online.</a
+          >
+        </p> -->
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="xyz" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>Demo Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journal Publications -->
+    <div class="publication journal">
+      <span class="pub-badge" style="background: #ff6b9d">PLOS ONE</span>
+      <span class="pub-badge bg-secondary">2025</span>
+      <div class="pub-title">
+        Adaptive TreeHive: Ensemble of trees for enhancing imbalanced intrusion
+        classification
+      </div>
+      <div class="pub-metadata">Journal Article</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Imbalanced intrusion classification is a complex and challenging task as
+        there are few number of instances/intrusions generally considered as
+        minority instances/intrusions in the imbalanced intrusion datasets. Data
+        sampling methods such as over-sampling and under-sampling methods are
+        commonly applied for dealing with imbalanced intrusion data. In
+        over-sampling, synthetic minority instances are generated e.g. SMOTE
+        (Synthetic Minority Over-sampling Technique) and on the contrary,
+        under-sampling methods remove the majority-class instances to create
+        balanced data e.g. random under-sampling. Both over-sampling and
+        under-sampling methods have the disadvantages as over-sampling technique
+        creates overfitting and under-sampling technique ignores a large portion
+        of the data. Ensemble learning in supervised machine learning is also a
+        common technique for handling imbalanced data. Random Forest and Bagging
+        techniques address the overfitting problem, and Boosting (AdaBoost)
+        gives more attention to the minority-class instances in its iterations.
+        In this paper, we have proposed a method for selecting the most
+        informative instances that represent the overall dataset. We have
+        applied both over-sampling and under-sampling techniques to balance the
+        data by employing the majority and minority informative instances. We
+        have used Random Forest, Bagging, and Boosting (AdaBoost) algorithms and
+        have compared their performances. We have used decision tree (C4.5) as
+        the base classifier of Random Forest and AdaBoost classifiers and naïve
+        Bayes classifier as the base classifier of the Bagging model. The
+        proposed method Adaptive TreeHive addresses both the issues of
+        imbalanced ratio and high dimensionality, resulting in reduced
+        computational power and execution time requirements. We have evaluated
+        the proposed Adaptive TreeHive method using five large-scale public
+        benchmark datasets. The experimental results, compared to data balancing
+        methods such as under-sampling and over-sampling, exhibit superior
+        performance of the Adaptive TreeHive with accuracy rates of 99.96%,
+        85.65%, 99.83%, 99.77%, and 95.54% on the NSL-KDD, UNSW-NB15,
+        CIC-IDS2017, CSE-CIC-IDS2018, and CICDDoS2019 datasets, respectively,
+        establishing the Adaptive TreeHive as a superior performer compared to
+        the traditional ensemble classifiers.
+      </div>
+      <div class="details bib">
+        <pre>
+@article{sobhani2025adaptive,
+  title={Adaptive TreeHive: Ensemble of trees for enhancing imbalanced intrusion classification},
+  author={Sobhani, Mahbub E and Rodela, Anika Tasnim and Farid, Dewan Md},
+  journal={PLoS One},
+  volume={20},
+  number={9},
+  pages={e0331307},
+  year={2025},
+  publisher={Public Library of Science San Francisco, CA USA}
+}</pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a
+            href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0331307"
+            target="_blank"
+            >https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0331307</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="AdaptiveTreeHive.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Adaptive TreeHive groups feature by gain ratio, build randomized
+              trees on each subset, and merge their outputs via weighted
+              majority voting. NSL-KDD, UNSW-NB15, CIC-IDS2017, CSE-CIC-IDS2018,
+              and CICDDoS2019 datasets are pre-processed, features ranked,
+              informative instances selected by clustering, redundancies
+              removed, and then split into training and testing sets. The chosen
+              trees (those exceeding a performance threshold) are trained on the
+              processed training set, assigned weights based on their error
+              rates, and their predictions are aggregated by weighted voting.
+              Performance is evaluated using accuracy, precision, recall, and
+              F1-score.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication journal">
+      <span class="pub-badge" style="background: #ff6b9d">Crop Design</span>
+      <span class="pub-badge bg-secondary">2025</span>
+      <div class="pub-title">
+        CropSynergy: Harnessing IoT Solutions for Smart and Efficient Crop
+        Management
+      </div>
+      <div class="pub-metadata">Journal Article</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Agriculture has been a cornerstone of human civilization and continues
+        evolving to meet the growing global population’s demands. In an era of
+        rapid technological advancement, the integration of smart agriculture,
+        also known as smart farming or precision farming, has become essential
+        for sustainable agricultural practices. This approach uses the Internet
+        of Things (IoT) and Artificial Intelligence (AI) to improve data
+        collection and analysis, facilitating real-time monitoring of crop
+        health, soil conditions, irrigation, and comprehensive farm management.
+        By incorporating IoT, farmers can make informed decisions, optimize
+        resource use, and improve crop yields. This study explores the scope of
+        integrating IoT into crop management to optimize traditional
+        crop-related issues and to improve the quality, production, and
+        marketing process. Our in-depth analysis illustrates the IoT
+        architecture, the IoT in smart farming, and how IoT sensors and devices
+        collect real-time data on soil moisture, temperature, humidity, and
+        other environmental factors, which are then processed using cloud
+        computing platforms and stored accordingly. After conducting an
+        exhaustive search with sorted keywords aligned with our research
+        interests, we have identified more than a thousand research articles. A
+        further filtering approach is applied based on inclusion and exclusion
+        criteria to select a significant number of well-suited articles, which
+        are thoroughly analyzed in the development of this systematic review
+        paper. The growing number of literature in this field has created a vast
+        area for exploration. In response, we have thoroughly studied all the
+        aspects of IoT and have proposed a novel taxonomy for IoT to
+        systematically classify and analyze key aspects like Sensors, Actuators,
+        Development Board, and Communication. We examine the application of IoT
+        in crop management, emphasizing its benefits, challenges, and future
+        potential. In addition, we analyze key IoT components, such as sensors,
+        data analytics, and decision-making tools, and explore their role in
+        enhancing agricultural sustainability, economic viability, and food
+        security. Finally, we concluded our study by addressing the challenges
+        and outlining future directions for further advancement.
+      </div>
+      <div class="details bib">
+        <pre>
+@article{EYASIN2025100127,
+  title = {CropSynergy: Harnessing IoT Solutions for Smart and Efficient Crop Management},
+  journal = {Crop Design},
+  pages = {100127},
+  year = {2025},
+  issn = {2772-8994},
+  doi = {https://doi.org/10.1016/j.cropd.2025.100127},
+  url = {https://www.sciencedirect.com/science/article/pii/S2772899425000333},
+  author = {Md Sanzid Hossain Eyasin and Mahbub E. Sobhani and Shamima Nasrin and Abu Sadat {Al Rafi} and A.K.M. {Muzahidul Islam}}
+}</pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S2772899425000333"
+            target="_blank"
+            >https://www.sciencedirect.com/science/article/pii/S2772899425000333</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="CropSynergy.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Taxonomy:</span
+            >
+            <p>Taxonomy of Crop Management in Smart Farming.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication journal">
+      <span class="pub-badge bg-warning text-dark">Neural Networks</span>
+      <span class="pub-badge bg-secondary">Under Review</span>
+      <div class="pub-title">
+        TextEconomizer: Enhancing Lossy Text Compression with Denoising
+        Transformers and Entropy Coding
+      </div>
+      <div class="pub-metadata">
+        Journal Article | Under 1<sup>st</sup> Revision
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">Abstract here.</div>
+      <div class="details bib">BibTeX here.</div>
+      <div class="details paper">Paper information here.</div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              src="https://placehold.co/300x200?text=Compression"
+              alt="Methodology"
+            />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Lossy compression framework preserving semantic meaning while
+              achieving high compression ratios using semantic similarity
+              metrics and context-aware pruning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication journal">
+      <span class="pub-badge bg-warning text-dark">PLOS ONE</span>
+      <span class="pub-badge bg-secondary">Under Review</span>
+      <div class="pub-title">
+        BanglaHateCorpus: A large-scale Bangla benchmark for hate speech
+        classification and a transformer-based deep learning method.
+      </div>
+      <div class="pub-metadata">Journal Article | Under Review</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">Abstract here.</div>
+      <div class="details bib">BibTeX here.</div>
+      <div class="details paper">Paper info here.</div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              src="https://placehold.co/300x200?text=Corpus"
+              alt="Methodology"
+            />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Large-scale corpus of 50,000+ annotated Bangla samples for hate
+              speech detection, validated through inter-annotator agreement
+              protocols achieving κ > 0.85.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication journal">
+      <span class="pub-badge bg-warning text-dark"
+        >International Journal of Network Management</span
+      >
+      <span class="pub-badge bg-secondary">Under Review</span>
+      <div class="pub-title">
+        Data security and energy-efficiency in wireless body area networks: A
+        systematic review.
+      </div>
+      <div class="pub-metadata">Journal Article | Under Review</div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this,'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this,'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">Abstract here.</div>
+      <div class="details bib">BibTeX here.</div>
+      <div class="details paper">Paper info here.</div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              src="https://placehold.co/300x200?text=WBAN+Security"
+              alt="Methodology"
+            />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Optimized WBAN architecture combining AES-128 encryption with
+              energy-efficient routing protocols, balancing security with power
+              constraints through adaptive techniques.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5>
+              <i class="fas fa-user-circle me-2 text-primary"></i>About Me
+            </h5>
+            <p class="text-secondary">
+              Mahbub E Sobhani Himel is a Lecturer and PhD aspirant specializing
+              in AI, LLMs, and Mathematical Reasoning. Committed to advancing
+              trustworthy AI solutions.
+            </p>
+          </div>
+
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5><i class="fas fa-handshake me-2 text-primary"></i>Connect</h5>
+            <p class="mb-2">
+              <a
+                href="https://www.linkedin.com/in/mahbub-e-sobhani-himel-38495313a"
+                target="_blank"
+                class="social-link"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/mahbubhimel"
+                target="_blank"
+                class="social-link"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://scholar.google.com/citations?user=ofEJXHQAAAAJ"
+                target="_blank"
+                class="social-link"
+                title="Google Scholar"
+              >
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+              <a
+                href="mailto:msobhani2410011@mscse.uiu.ac.bd"
+                class="social-link"
+                title="Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </p>
+            <p class="text-secondary small">Dhaka, Bangladesh</p>
+          </div>
+
+          <div class="col-md-4">
+            <h5><i class="fas fa-link me-2 text-primary"></i>Quick Links</h5>
+            <a href="#about" class="d-block mb-2">About</a>
+            <a href="#interests" class="d-block mb-2">Research</a>
+            <a href="#education" class="d-block mb-2">Education</a>
+            <a href="#publications" class="d-block mb-2">Publications</a>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: var(--border-color)" />
+
+        <div class="text-center text-secondary small">
+          <p class="mb-1">
+            <strong>&copy; 2025 Mahbub E Sobhani Himel</strong> | All rights
+            reserved
+          </p>
+          <p class="mb-0">Seeking PhD Position Fall 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const icon = document.getElementById("theme-icon");
+        if (html.getAttribute("data-theme") === "dark") {
+          html.setAttribute("data-theme", "light");
+          icon.className = "fas fa-moon";
+        } else {
+          html.setAttribute("data-theme", "dark");
+          icon.className = "fas fa-sun";
+        }
+        localStorage.setItem("theme", html.getAttribute("data-theme"));
+      }
+
+      function filterPubs(type) {
+        document.querySelectorAll(".publication").forEach((pub) => {
+          if (type === "all" || pub.classList.contains(type)) {
+            pub.style.display = "block";
+          } else {
+            pub.style.display = "none";
+          }
+        });
+      }
+
+      const threeDot = document.querySelector(".three-dot");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (threeDot) {
+        threeDot.addEventListener("click", () => {
+          mobileMenu.classList.toggle("show");
+        });
+      }
+
+      // Load theme preference
+      window.addEventListener("load", () => {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        const icon = document.getElementById("theme-icon");
+        icon.className = savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+      });
+    </script>
+  </body>
 </html>
