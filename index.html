@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -41,7 +41,9 @@
       }
 
       * {
-        transition: background-color 0.3s, color 0.3s;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
       }
 
       body {
@@ -1124,25 +1126,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1224,25 +1226,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1317,25 +1319,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1361,12 +1363,17 @@
       <div class="details bib">
         <pre>
 @inproceedings{juboraj2025bracucl,
-  title={BRACU_CL at BLP-2025 Task 2: CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code Generation},
-  author={Juboraj, Md. Fahmid-Ul-Alam and Niloy, Soumik Deb and Sobhani, Mahbub E and Sadeque, Farig Yousuf},
-  booktitle={The Second Workshop on Bangla Language Processing (BLP-2025)},
-  pages={},
-  year={2025},
-  note={Accepted}
+  title = "{BRACU}{\_}{CL} at {BLP}-2025 Task 2: {C}ode{M}ist: A Transformer-Based Framework for {B}angla Instruction-to-Code Generation",
+  author = "Juboraj, Md. Fahmid-Ul-Alam  and Niloy, Soumik Deb  and E Sobhani, Mahbub  and Sadeque, Farig",
+  editor = "Alam, Firoj  and Kar, Sudipta  andChowdhury, Shammur Absar  and Hassan, Naeemul  and Prince, Enamul Hoque  and Tasnim, Mohiuddin  and Rony, Md Rashad Al Hasan  and Rahman, Md Tahmid Rahman",
+  booktitle = "Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)",
+  month = dec,
+  year = "2025",
+  address = "Mumbai, India",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2025.banglalp-1.67/",
+  pages = "656--662",
+  ISBN = "979-8-89176-314-2"
 }
       </pre
         >
@@ -1374,8 +1381,8 @@
       <div class="details paper">
         <p>
           <strong>Paper Link:</strong>
-          <a href="Accepted but not yet available online." target="_blank"
-            >Accepted but not yet available online.</a
+          <a href="https://aclanthology.org/2025.banglalp-1.67/" target="_blank"
+            >https://aclanthology.org/2025.banglalp-1.67/</a
           >
         </p>
       </div>
@@ -1414,25 +1421,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1508,25 +1515,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1608,25 +1615,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1680,25 +1687,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1801,25 +1808,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1911,25 +1918,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -1970,25 +1977,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
@@ -2031,25 +2038,25 @@
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'abs')"
+          onclick="showDetails(this, 'abs')"
         >
           <i class="fas fa-align-left me-1"></i>Abstract
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'bib')"
+          onclick="showDetails(this, 'bib')"
         >
           <i class="fas fa-quote-right me-1"></i>Citation
         </button>
         <button
           class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this,'paper')"
+          onclick="showDetails(this, 'paper')"
         >
           <i class="fas fa-file-pdf me-1"></i>Paper
         </button>
         <button
           class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this,'methodology')"
+          onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
