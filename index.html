@@ -614,6 +614,7 @@
         <a href="#experience" class="desktop">Experience</a>
         <a href="#projects" class="desktop">Projects</a>
         <a href="#awards" class="desktop">Awards</a>
+        <a href="#workshops" class="desktop">Workshops</a>
         <a href="#publications" class="desktop">Publications</a>
         <i
           class="fas fa-moon ms-4"
@@ -636,6 +637,7 @@
       <a href="#experience">Experience</a>
       <a href="#projects">Funded Projects</a>
       <a href="#awards">Awards & Achievements</a>
+      <a href="#workshops">Workshops & Talks</a>
       <a href="#publications">Publications</a>
     </div>
 
@@ -710,18 +712,16 @@
           "
         >
           <h6 class="fw-bold mb-2">
-            <i class="fas fa-bullseye me-2"></i>Career Objective
+            <i class="fas fa-bullseye me-2"></i>Research Objective
           </h6>
-          <p class="mb-0" style="font-size: 0.95rem">
-            My research is focused on
-            <strong>Large Language Models (LLMs)</strong>,
-            <strong>Multimodal Large Language Models (MLLMs)</strong>,
-            <strong>Mathematical Reasoning</strong>, and general
-            <strong>Artificial Intelligence (AI)</strong> to solve complex
-            problems and advance the field. In my teaching, I want to help
-            students gain the knowledge and skills to use computational
-            techniques for solving real-world problems with creativity and
-            integrity.
+          <p class="mb-0" style="font-size: 0.95rem; text-align: justify; line-height: 1.6;">
+            My research focuses on the efficiency of Large Language Models and
+            Multimodal systems, driven by a passion for uncovering
+            unconventional solutions to complex problems. I aim to fully engage
+            myself in exploring neural architectures for meaningful advancements
+            that are cognitively robust. Leveraging my background, I now seek to
+            expand my research ability through doctoral study to develop
+            next-generation AI systems.
           </p>
         </div>
       </div>
@@ -1086,6 +1086,133 @@
           <p>Active contributor to AI/ML projects on GitHub</p>
         </div>
       </div> -->
+    </div>
+
+    <!-- Workshops & Talks -->
+    <style>
+      .workshop-card {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 50px;
+        transition: all 0.3s ease;
+      }
+      .workshop-card:hover {
+        border-color: var(--link-color);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+      .workshop-header {
+        display: flex;
+        gap: 25px;
+        align-items: flex-start;
+      }
+      .workshop-poster {
+        flex: 0 0 32%;
+      }
+      .workshop-poster img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid var(--border-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      }
+      .workshop-info {
+        flex: 1;
+      }
+      .workshop-info h5 {
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+      }
+      .workshop-subtitle {
+        color: var(--link-color);
+        font-weight: 600;
+        font-size: 0.98rem;
+        margin-bottom: 15px;
+      }
+      .workshop-meta {
+        font-size: 0.92rem;
+        color: var(--text-secondary);
+        margin-bottom: 8px;
+      }
+      .workshop-meta i {
+        color: var(--link-color);
+        width: 20px;
+      }
+      .workshop-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .workshop-gallery img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid var(--border-color);
+        transition: all 0.3s ease;
+      }
+      .workshop-gallery img:hover {
+        transform: scale(1.03);
+        border-color: var(--link-color);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      @media (max-width: 768px) {
+        .workshop-header {
+          flex-direction: column;
+        }
+        .workshop-poster {
+          flex: 0 0 100%;
+          max-width: 320px;
+          margin: 0 auto;
+        }
+        .workshop-gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .workshop-gallery img {
+          height: 140px;
+        }
+      }
+    </style>
+    <h2 class="section-title" id="workshops">
+      <i class="fas fa-chalkboard-teacher"></i> Workshops & Talks
+    </h2>
+    <div class="workshop-card">
+      <div class="workshop-header">
+        <div class="workshop-poster">
+          <img src="BAULC/BAULC_Poster.jpg" alt="Language Meets Innovation Workshop Poster" />
+        </div>
+        <div class="workshop-info">
+          <span class="pub-badge bg-success">Invited Speaker</span>
+          <h5 class="mt-2">Language Meets Innovation: Where Bangla Stands in AI</h5>
+          <p class="workshop-subtitle">
+            A Hands-On Guide to AI Tools for Non-Technical Workflows
+          </p>
+          <p class="workshop-meta">
+            <i class="fas fa-university"></i> Bangladesh Agricultural University,
+            Mymensingh
+          </p>
+          <p class="workshop-meta">
+            <i class="fas fa-calendar-alt"></i> June 13, 2026 &middot; 10:30 AM
+          </p>
+          <p class="workshop-meta">
+            <i class="fas fa-users"></i> Resource Person, alongside faculty and
+            researchers from BRAC University
+          </p>
+          <p class="text-secondary small mb-0 mt-3" style="text-align: justify; line-height: 1.6;">
+            Conducted a hands-on workshop introducing practical AI tools for
+            non-technical workflows, with a focus on the current state and
+            opportunities of Bangla language technology in modern AI systems.
+          </p>
+        </div>
+      </div>
+      <div class="workshop-gallery">
+        <img src="BAULC/BAULC_1.JPG" alt="Workshop at Bangladesh Agricultural University" />
+        <img src="BAULC/BAULC_2.jpg" alt="Workshop at Bangladesh Agricultural University" />
+        <img src="BAULC/BAULC_3.jpg" alt="Workshop at Bangladesh Agricultural University" />
+      </div>
     </div>
 
     <!-- Publications -->
