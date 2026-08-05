@@ -39,6 +39,7 @@
       </div>
       <div class="d-flex align-items-center">
         <a href="#about" class="desktop">About</a>
+        <a href="#research" class="desktop">Research</a>
         <a href="#education" class="desktop">Education</a>
         <a href="#experience" class="desktop">Experience</a>
         <a href="#projects" class="desktop">Projects</a>
@@ -61,7 +62,7 @@
         >&times;</span
       >
       <a href="#about">About</a>
-      <a href="#interests">Research Interests</a>
+      <a href="#research">Research Interests</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Funded Projects</a>
@@ -130,6 +131,13 @@
             class="btn btn-outline-info btn-sm rounded-pill px-4"
           >
             <i class="fas fa-graduation-cap me-2"></i> Google Scholar
+          </a>
+          <a
+            href="https://aclanthology.org/people/mahbub-e-sobhani/"
+            target="_blank"
+            class="btn btn-outline-danger btn-sm rounded-pill px-4"
+          >
+            <i class="fas fa-feather-pointed me-2"></i> ACL Anthology
           </a>
         </div>
         <div
@@ -596,6 +604,118 @@
 
 
     <!-- Conference Publications -->
+    <div class="publication conf">
+      <span class="pub-badge bg-success">LREC</span>
+      <span class="pub-badge bg-secondary">2026</span>
+      <div class="pub-title">
+        Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla
+        Dialect Translation
+      </div>
+      <div class="pub-metadata">
+        DialRes Workshop @ LREC 2026 | Conference Paper
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this, 'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Regional dialects of Bangla, such as Sylheti and Chittagonian, pose
+        significant challenges for natural language processing due to their
+        low-resource nature and substantial linguistic variation from standard
+        Bangla. In this work, we present a systematic evaluation of eight
+        open-source LLMs for translating fifteen distinct Bangla dialects into
+        standard Bangla. To achieve this comprehensive coverage, we utilize a
+        combination of established benchmarks and a novel dataset curated from
+        an ongoing regional linguistic project. We assess model performance
+        using a multi-metric framework that combines exact-match and error-rate
+        evaluations such as, Averaged BLEU, WER, and CER with embedding-based
+        semantic metrics including BERTScore, METEOR, and COMET. Additionally,
+        we perform a detailed dialect-level linguistic analysis to identify the
+        deep-seated structural, orthographic, and semantic barriers inherent to
+        dialectal translation. Our study highlights the strengths and
+        limitations of current open-source models, provides empirical insights
+        for future dialect-aware fine-tuning, and contributes a reproducible
+        benchmark for the research community.
+      </div>
+      <div class="details bib">
+        <pre>
+@inproceedings{niloy-etal-2026-meaning,
+    title = "Meaning Over Morphology: A Multi-Metric Benchmark of {LLM}s for {B}angla Dialect Translation",
+    author = "Niloy, Soumik Deb  and
+      Rahman, Subhey Sadi  and
+      E Sobhani, Mahbub  and
+      Alam, Md. Golam Rabiul  and
+      Sadeque, Farig Yousuf  and
+      Hassan, Md. Rezuwan",
+    booktitle = "Proceedings of the First Workshop on Dialects in {NLP} {---} A Resource Perspective",
+    month = may,
+    year = "2026",
+    address = "Palma de Mallorca",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.dialres-1.24/",
+    doi = "10.63317/3h8y7fs2zbq4",
+    pages = "238--255"
+}
+      </pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://aclanthology.org/2026.dialres-1.24/" target="_blank"
+            >https://aclanthology.org/2026.dialres-1.24/</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img src="Figures/MoM.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Overview of the benchmark pipeline. Regional Bangla data from
+              multiple sources is converted into a unified JSON format
+              (district, regional Bangla, standard Bangla, dataset source),
+              then filtered, cleaned, and validated to build the RSBC corpus
+              covering fifteen distinct dialects. Regional sentences are
+              translated into standard Bangla by eight open-source LLMs, and
+              model outputs are compared against gold-standard references
+              using a multi-metric evaluation framework combining exact-match
+              and error-rate measures (Averaged BLEU, WER, CER) with
+              embedding-based semantic metrics (BERTScore, METEOR, COMET),
+              complemented by a dialect-level linguistic analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="publication conf">
       <span class="pub-badge bg-success">EACL</span>
       <span class="pub-badge bg-secondary">2026</span>
@@ -1183,7 +1303,7 @@
         TextEconomizer: Enhancing lossy text compression with denoising transformers and entropy coding
       </div>
       <div class="pub-metadata">
-        Journal Article | IF: 6.3 &middot; CiteScore: 10.9 [Q1 | SCI-E]
+        Journal Article | IF: 7.2 &middot; CiteScore: 10.9 [Q1 | SCI-E]
       </div>
       <div class="buttons-area">
         <button
@@ -1266,7 +1386,9 @@
         CropSynergy: Harnessing IoT Solutions for Smart and Efficient Crop
         Management
       </div>
-      <div class="pub-metadata">Journal Article | Cite Score: 7.1 [Q1 | ESCI]</div>
+      <div class="pub-metadata">
+        Journal Article | IF: 5.2 &middot; CiteScore: 7.1 [Q1 | ESCI]
+      </div>
       <div class="buttons-area">
         <button
           class="btn btn-sm btn-outline-primary"
@@ -1651,6 +1773,14 @@
                 <i class="fas fa-graduation-cap"></i>
               </a>
               <a
+                href="https://aclanthology.org/people/mahbub-e-sobhani/"
+                target="_blank"
+                class="social-link"
+                title="ACL Anthology"
+              >
+                <i class="fas fa-feather-pointed"></i>
+              </a>
+              <a
                 href="mailto:msobhani2410011@mscse.uiu.ac.bd"
                 class="social-link"
                 title="Email"
@@ -1664,7 +1794,7 @@
           <div class="col-md-4">
             <h5><i class="fas fa-link me-2 text-primary"></i>Quick Links</h5>
             <a href="#about" class="d-block mb-2">About</a>
-            <a href="#interests" class="d-block mb-2">Research</a>
+            <a href="#research" class="d-block mb-2">Research</a>
             <a href="#education" class="d-block mb-2">Education</a>
             <a href="#publications" class="d-block mb-2">Publications</a>
           </div>
