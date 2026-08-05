@@ -34,7 +34,7 @@
     <div
       class="navbar-custom d-flex align-items-center justify-content-between px-4 py-3"
     >
-      <div class="fw-bold" style="font-size: 1.1rem; color: var(--link-color)">
+      <div class="brand fw-bold">
         <i class="fas fa-graduation-cap me-2"></i>Mahbub E Sobhani Himel
       </div>
       <div class="d-flex align-items-center">
@@ -49,8 +49,8 @@
         <i
           class="fas fa-moon ms-4"
           id="theme-icon"
-          style="cursor: pointer; font-size: 1.1rem"
           onclick="toggleTheme()"
+          title="Toggle dark mode"
         ></i>
         <span class="three-dot"><i class="fas fa-ellipsis-v"></i></span>
       </div>
@@ -75,9 +75,7 @@
     <div class="about-container" id="about">
       <div class="about-info">
         <span class="badge bg-primary mb-3">Fall 2027 Applicant</span>
-        <h1 class="fw-bold mb-2" style="font-size: 2.5rem">
-          Mahbub E Sobhani Himel
-        </h1>
+        <h1 class="hero-name fw-bold mb-2">Mahbub E Sobhani Himel</h1>
         <h3 class="text-primary fw-bold mb-3">Prospective PhD Candidate</h3>
         <p class="fst-italic text-secondary mb-4" style="font-size: 1.1rem">
           "What doesn't kill you makes you stronger."
@@ -145,7 +143,7 @@
           style="
             background: var(--bg-secondary);
             border-radius: 10px;
-            border-left: 4px solid var(--link-color);
+            border-left: 4px solid var(--accent);
           "
         >
           <h6 class="fw-bold mb-2">
@@ -169,16 +167,7 @@
           class="profile-img"
           alt="Mahbub E Sobhani Himel"
         />
-        <p
-          style="
-            color: var(--link-color);
-            margin-top: 15px;
-            font-weight: 700;
-            font-size: 0.95rem;
-          "
-        >
-          Seeking Grad Opportunities | Fall 2027
-        </p>
+        <p class="profile-caption">Seeking Grad Opportunities | Fall 2027</p>
       </div>
     </div>
 
@@ -273,7 +262,7 @@
     <h2 class="section-title" id="experience">
       <i class="fas fa-briefcase"></i> Professional Experience
     </h2>
-    <div class="mb-5">
+    <div class="mb-5 timeline">
       <div class="timeline-card card border-0 shadow-sm">
         <div class="card-body">
           <h5>
@@ -570,7 +559,7 @@
       <i class="fas fa-book-open"></i> Publications & Research Work
     </h2>
 
-    <div class="d-flex gap-4 mb-4 flex-wrap">
+    <div class="pub-filter d-flex gap-3 mb-4 flex-wrap">
       <label class="form-check-label">
         <input
           type="radio"
@@ -1297,7 +1286,7 @@
 
     <!-- Journal Publications -->
     <div class="publication journal">
-      <span class="pub-badge" style="background: #069494">Neural Networks</span>
+      <span class="pub-badge">Neural Networks</span>
       <span class="pub-badge bg-secondary">2026</span>
       <div class="pub-title">
         TextEconomizer: Enhancing lossy text compression with denoising transformers and entropy coding
@@ -1380,7 +1369,7 @@
     </div>
 
     <div class="publication journal">
-      <span class="pub-badge" style="background: #069494">Crop Design</span>
+      <span class="pub-badge">Crop Design</span>
       <span class="pub-badge bg-secondary">2026</span>
       <div class="pub-title">
         CropSynergy: Harnessing IoT Solutions for Smart and Efficient Crop
@@ -1490,7 +1479,7 @@
     </div>
 
     <div class="publication journal">
-      <span class="pub-badge" style="background: #069494">PLOS ONE</span>
+      <span class="pub-badge">PLOS ONE</span>
       <span class="pub-badge bg-secondary">2025</span>
       <div class="pub-title">
         Adaptive TreeHive: Ensemble of trees for enhancing imbalanced intrusion
