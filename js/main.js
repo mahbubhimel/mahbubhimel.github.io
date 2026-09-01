@@ -34,11 +34,35 @@ function filterPubs(type) {
 const threeDot = document.querySelector(".three-dot");
 const mobileMenu = document.getElementById("mobileMenu");
 
+function setMobileMenu(open) {
+  if (!mobileMenu) return;
+  mobileMenu.classList.toggle("show", open);
+  if (threeDot) threeDot.setAttribute("aria-expanded", String(open));
+}
+
+function closeMobileMenu() {
+  setMobileMenu(false);
+  if (threeDot) threeDot.focus();
+}
+
 if (threeDot) {
   threeDot.addEventListener("click", () => {
-    mobileMenu.classList.toggle("show");
+    setMobileMenu(!mobileMenu.classList.contains("show"));
   });
 }
+
+// Close the menu when a link inside it is chosen, or on Escape
+if (mobileMenu) {
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => setMobileMenu(false));
+  });
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && mobileMenu && mobileMenu.classList.contains("show")) {
+    closeMobileMenu();
+  }
+});
 
 // Restore saved theme immediately (script is deferred, DOM is parsed)
 const savedTheme = localStorage.getItem("theme") || "light";

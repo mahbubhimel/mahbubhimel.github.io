@@ -4,6 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahbub E Sobhani Himel - PhD Application Portfolio</title>
+    <meta
+      name="description"
+      content="Mahbub E Sobhani Himel - Lecturer, Research Assistant, and prospective PhD candidate working on Large Language Models, multimodal systems, and mathematical reasoning. Publications at EMNLP, EACL, LREC, and IJCNLP-AACL."
+    />
+    <meta name="author" content="Mahbub E Sobhani Himel" />
+    <link rel="canonical" href="https://mahbubhimel.github.io/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="my_profile_photo.jpg" />
+
+    <!-- Link preview (Open Graph / Twitter) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://mahbubhimel.github.io/" />
+    <meta
+      property="og:title"
+      content="Mahbub E Sobhani Himel - PhD Application Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Lecturer and Research Assistant working on Large Language Models, multimodal systems, and mathematical reasoning. Publications at EMNLP, EACL, LREC, and IJCNLP-AACL."
+    />
+    <meta
+      property="og:image"
+      content="https://mahbubhimel.github.io/my_profile_photo.jpg"
+    />
+    <meta property="og:image:alt" content="Mahbub E Sobhani Himel" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mahbub E Sobhani Himel - PhD Application Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Lecturer and Research Assistant working on Large Language Models, multimodal systems, and mathematical reasoning."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mahbubhimel.github.io/my_profile_photo.jpg"
+    />
 
     <!-- Bootstrap -->
     <link
@@ -46,21 +86,38 @@
         <a href="#awards" class="desktop">Awards</a>
         <a href="#workshops" class="desktop">Workshops</a>
         <a href="#publications" class="desktop">Publications</a>
-        <i
-          class="fas fa-moon ms-4"
-          id="theme-icon"
+        <button
+          type="button"
+          class="icon-btn ms-4"
+          id="theme-toggle"
           onclick="toggleTheme()"
+          aria-label="Toggle dark mode"
           title="Toggle dark mode"
-        ></i>
-        <span class="three-dot"><i class="fas fa-ellipsis-v"></i></span>
+        >
+          <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          class="three-dot icon-btn"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <span class="close-menu" onclick="mobileMenu.classList.remove('show')"
-        >&times;</span
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <button
+        type="button"
+        class="close-menu"
+        onclick="closeMobileMenu()"
+        aria-label="Close navigation menu"
       >
+        &times;
+      </button>
       <a href="#about">About</a>
       <a href="#research">Research Interests</a>
       <a href="#education">Education</a>
@@ -69,7 +126,7 @@
       <a href="#awards">Awards & Achievements</a>
       <a href="#workshops">Workshops & Talks</a>
       <a href="#publications">Publications</a>
-    </div>
+    </nav>
 
     <!-- Header / About Section -->
     <div class="about-container" id="about">
@@ -521,7 +578,7 @@
     <div class="workshop-card">
       <div class="workshop-header">
         <div class="workshop-poster">
-          <img src="BAULC/BAULC_Poster.jpg" alt="Language Meets Innovation Workshop Poster" />
+          <img loading="lazy" decoding="async" src="BAULC/BAULC_Poster.jpg" alt="Language Meets Innovation Workshop Poster" />
         </div>
         <div class="workshop-info">
           <span class="pub-badge bg-success">Invited Speaker</span>
@@ -548,9 +605,9 @@
         </div>
       </div>
       <div class="workshop-gallery">
-        <img src="BAULC/BAULC_1.JPG" alt="Workshop at Bangladesh Agricultural University" />
-        <img src="BAULC/BAULC_2.jpg" alt="Workshop at Bangladesh Agricultural University" />
-        <img src="BAULC/BAULC_3.jpg" alt="Workshop at Bangladesh Agricultural University" />
+        <img loading="lazy" decoding="async" src="BAULC/BAULC_1.JPG" alt="Workshop at Bangladesh Agricultural University" />
+        <img loading="lazy" decoding="async" src="BAULC/BAULC_2.jpg" alt="Workshop at Bangladesh Agricultural University" />
+        <img loading="lazy" decoding="async" src="BAULC/BAULC_3.jpg" alt="Workshop at Bangladesh Agricultural University" />
       </div>
     </div>
 
@@ -593,6 +650,99 @@
 
 
     <!-- Conference Publications -->
+    <div class="publication conf">
+      <span class="pub-badge bg-success">EMNLP</span>
+      <span class="pub-badge bg-secondary">2026</span>
+      <div class="pub-title">
+        Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects
+      </div>
+      <div class="pub-metadata">
+        EMNLP 2026 (Findings) | Conference Paper
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this, 'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Bangla culture is richly expressed through region, dialect, history, food, politics, media,
+        and everyday visual life, yet it remains underrepresented in multimodal evaluation. To address this gap, we introduce BANGLAVERSE, a
+        culturally grounded benchmark for evaluating
+        multilingual vision–language models (VLMs)
+        on Bengali culture across historically linked
+        languages and regional dialects. Built from
+        1,152 manually curated images across nine domains, the benchmark supports visual question
+        answering and captioning, and is expanded into
+        four languages and five Bangla dialects, yielding ∼32.2K artifacts. Our experiments show
+        that evaluating only standard Bangla overestimates true model capability: performance
+        drops under dialectal variation, especially for
+        caption generation, while historically linked
+        languages such as Hindi and Urdu retain some
+        cultural meaning but remain weaker for structured reasoning. Across domains, the main bottleneck is missing cultural knowledge rather
+        than visual grounding alone, with knowledgeintensive categories. These findings position
+        BANGLAVERSE as a more realistic test bed for
+        measuring culturally grounded multimodal understanding under linguistic variation.
+      </div>
+      <div class="details bib">
+        <pre>
+@misc{sayeedi2026dialectslanguagesculturallens,
+      title={Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects}, 
+      author={Nurul Labib Sayeedi and Md. Faiyaz Abdullah Sayeedi and Shubhashis Roy Dipta and Rubaya Tabassum and Ariful Ekraj Hridoy and Mehraj Mahmood and Mahbub E Sobhani and Md. Tarek Hasan and Swakkhar Shatabda},
+      year={2026},
+      eprint={2603.21165},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.21165},
+      note={Accepted at EMNLP 2026 (Findings)},
+}
+        </pre>
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/abs/2603.21165" target="_blank"
+            >https://arxiv.org/abs/2603.21165</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img loading="lazy" decoding="async" src="Figures/BanglaVerse.png" alt="Methodology" />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Overview of the BANGLAVERSE dataset and experimental setup. The figure shows the two task types, example annotations for each task, artifacts generation and evaluation pipeline with multiple metrics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="publication conf">
       <span class="pub-badge bg-success">LREC</span>
       <span class="pub-badge bg-secondary">2026</span>
@@ -681,7 +831,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/MoM.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/MoM.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -785,7 +935,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/MathMist.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/MathMist.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -880,7 +1030,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/interpreter-solver.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/interpreter-solver.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -979,7 +1129,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/CodeMist.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/CodeMist.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1074,7 +1224,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/RejuvenateFormer.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/RejuvenateFormer.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1172,7 +1322,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/Jatikarok.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/Jatikarok.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1193,13 +1343,14 @@
 
     <!-- under review conferences -->
     <div class="publication conf">
-      <span class="pub-badge bg-primary">ACL</span>
+      <span class="pub-badge bg-warning text-dark">ARR</span>
       <span class="pub-badge bg-secondary">Under Review</span>
       <div class="pub-title">
-        Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects
+        Time Present and Time Past: Benchmarking Large Language Models on
+        Temporally Evolving Document Understanding
       </div>
       <div class="pub-metadata">
-        ARR May Cycle 2026 | Conference Paper | Under Review
+        ARR August Cycle 2026 | Conference Paper | Under Review
       </div>
       <div class="buttons-area">
         <button
@@ -1228,56 +1379,78 @@
         </button>
       </div>
       <div class="details abs">
-        Bangla culture is richly expressed through region, dialect, history, food, politics, media,
-        and everyday visual life, yet it remains underrepresented in multimodal evaluation. To address this gap, we introduce BANGLAVERSE, a
-        culturally grounded benchmark for evaluating
-        multilingual vision–language models (VLMs)
-        on Bengali culture across historically linked
-        languages and regional dialects. Built from
-        1,152 manually curated images across nine domains, the benchmark supports visual question
-        answering and captioning, and is expanded into
-        four languages and five Bangla dialects, yielding ∼32.2K artifacts. Our experiments show
-        that evaluating only standard Bangla overestimates true model capability: performance
-        drops under dialectal variation, especially for
-        caption generation, while historically linked
-        languages such as Hindi and Urdu retain some
-        cultural meaning but remain weaker for structured reasoning. Across domains, the main bottleneck is missing cultural knowledge rather
-        than visual grounding alone, with knowledgeintensive categories. These findings position
-        BANGLAVERSE as a more realistic test bed for
-        measuring culturally grounded multimodal understanding under linguistic variation.
+        Evolving documents, such as laws, tax codes, and software documentation,
+        are amended, replaced, and sometimes reverted over time, so a question
+        has different correct answers at different dates. In contrast to
+        encyclopedic knowledge, where an old fact is simply overwritten, an
+        amendment is itself an official text that states what it replaces and
+        when it takes effect, and the earlier version stays correct for its
+        validity period. The central challenge is therefore version resolution,
+        that is, identifying the version in force on the queried date. Existing
+        temporal QA datasets treat time only as an annotation, so version
+        resolution stays untested. We present TIDE, an expert-verified benchmark
+        of 3,050 QA pairs over 644 official customs instruments issued between
+        1969 and 2025 by the Government of Bangladesh, covering eight task types
+        over deeply code-mixed documents that are heterogeneous in layout and
+        dated in two calendars. In addition, we evaluate nine recent LLMs under a
+        single protocol across parametric, gold-context, and retrieval access,
+        scored by a three-judge LLM council with a hard date gate separating
+        correct meaning from correct time. The best macro-averaged accuracy is
+        only 68.5%. Resolving a version from an implicit date reaches 59.7%, and
+        detecting that the supplied version does not govern the query reaches
+        only 26.7%. Models are more likely to find correct versions than to
+        reject incorrect ones, and they tend to follow a confident parametric
+        answer over the supplied authoritative text. All code and data are
+        available at https://github.com/icsetepa44/TIDE
       </div>
       <div class="details bib">
         <pre>
-@misc{sayeedi2026dialectslanguagesculturallens,
-      title={Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects}, 
-      author={Nurul Labib Sayeedi and Md. Faiyaz Abdullah Sayeedi and Shubhashis Roy Dipta and Rubaya Tabassum and Ariful Ekraj Hridoy and Mehraj Mahmood and Mahbub E Sobhani and Md. Tarek Hasan and Swakkhar Shatabda},
+@misc{sobhani2026timepresenttimepast,
+      title={Time Present and Time Past: Benchmarking Large Language Models on Temporally Evolving Document Understanding},
+      author={Mahbub E Sobhani and Md. Faiyaz Abdullah Sayeedi and Fahmid Hasan Chowdhury and Md Adnan Arefeen and Farig Sadeque and Md. Faizul Bari and Swakkhar Shatabda},
       year={2026},
-      eprint={2603.21165},
+      eprint={2608.08512},
       archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2603.21165}, 
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2608.08512},
 }
         </pre>
       </div>
       <div class="details paper">
         <p>
           <strong>Paper Link:</strong>
-          <a href="https://arxiv.org/abs/2603.21165" target="_blank"
-            >https://arxiv.org/abs/2603.21165</a
+          <a href="https://arxiv.org/abs/2608.08512" target="_blank"
+            >https://arxiv.org/abs/2608.08512</a
           >
         </p>
       </div>
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/BanglaVerse.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/TIDE.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
               ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
             >
             <p>
-              Overview of the BANGLAVERSE dataset and experimental setup. The figure shows the two task types, example annotations for each task, artifacts generation and evaluation pipeline with multiple metrics.
+              Overview of the TIDE benchmark. (a) Corpus construction parses 644
+              official customs instruments issued between 1969 and 2025 (3 Acts,
+              20 GOs, 609 SROs, 12 Rules) into clauses, tables, and metadata,
+              then clusters them by entity and concept to build amendment
+              threads and generate temporally grounded question-answer pairs,
+              verified by 13 volunteer annotators to yield 3,050 expert-verified
+              QA items. (b) An amendment timeline illustrates the core
+              challenge: each amendment states what it replaces and when it
+              takes effect, so every version stays correct for its own validity
+              period, and temporal drift emerges between the benchmark cut-off
+              and the model knowledge cut-off. (c) Eight task types probe
+              version resolution from different angles, including temporal MCQ,
+              relative-time QA, event sorting, perturbation detection, and
+              context misalignment. (d) Evaluation runs nine recent LLMs under
+              parametric, gold-context, and RAG access, scored by a three-judge
+              LLM council with a hard date gate that zeroes out answers with the
+              wrong effective date.
             </p>
           </div>
         </div>
@@ -1354,7 +1527,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/TextEconomizer.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/TextEconomizer.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1466,7 +1639,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/CropSynergy.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/CropSynergy.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1575,7 +1748,7 @@
       <div class="details methodology">
         <div class="methodology-container">
           <div class="methodology-image">
-            <img src="Figures/AdaptiveTreeHive.png" alt="Methodology" />
+            <img loading="lazy" decoding="async" src="Figures/AdaptiveTreeHive.png" alt="Methodology" />
           </div>
           <div class="methodology-text">
             <span class="methodology-label"
@@ -1609,41 +1782,14 @@
       <div class="pub-metadata">Journal Article | Under Review</div>
       <div class="buttons-area">
         <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'abs')"
-        >
-          <i class="fas fa-align-left me-1"></i>Abstract
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'bib')"
-        >
-          <i class="fas fa-quote-right me-1"></i>Citation
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'paper')"
-        >
-          <i class="fas fa-file-pdf me-1"></i>Paper
-        </button>
-        <button
           class="btn btn-sm btn-outline-info"
           onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
       </div>
-      <div class="details abs">Abstract here.</div>
-      <div class="details bib">BibTeX here.</div>
-      <div class="details paper">Paper info here.</div>
       <div class="details methodology">
         <div class="methodology-container">
-          <div class="methodology-image">
-            <img
-              src="https://placehold.co/300x200?text=Corpus"
-              alt="Methodology"
-            />
-          </div>
           <div class="methodology-text">
             <span class="methodology-label"
               ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
@@ -1670,41 +1816,14 @@
       <div class="pub-metadata">Journal Article | Under Review</div>
       <div class="buttons-area">
         <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'abs')"
-        >
-          <i class="fas fa-align-left me-1"></i>Abstract
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'bib')"
-        >
-          <i class="fas fa-quote-right me-1"></i>Citation
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'paper')"
-        >
-          <i class="fas fa-file-pdf me-1"></i>Paper
-        </button>
-        <button
           class="btn btn-sm btn-outline-info"
           onclick="showDetails(this, 'methodology')"
         >
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
       </div>
-      <div class="details abs">Abstract here.</div>
-      <div class="details bib">BibTeX here.</div>
-      <div class="details paper">Paper info here.</div>
       <div class="details methodology">
         <div class="methodology-container">
-          <div class="methodology-image">
-            <img
-              src="https://placehold.co/300x200?text=WBAN+Security"
-              alt="Methodology"
-            />
-          </div>
           <div class="methodology-text">
             <span class="methodology-label"
               ><i class="fas fa-microscope me-2"></i>Research Methodology:</span

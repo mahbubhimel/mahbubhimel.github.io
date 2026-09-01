@@ -63,6 +63,17 @@
   color: var(--accent-strong);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchor targets clear the fixed navbar */
+.section-title,
+#about,
+[id] {
+  scroll-margin-top: 100px;
+}
+
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -120,10 +131,10 @@ a {
   border-bottom-color: var(--accent);
 }
 
-#theme-icon {
+/* Circular icon buttons (theme toggle, mobile menu trigger) */
+.icon-btn {
   cursor: pointer;
   font-size: 1rem;
-  margin-left: 16px !important;
   width: 36px;
   height: 36px;
   display: inline-flex;
@@ -131,14 +142,30 @@ a {
   justify-content: center;
   border: 1px solid var(--border-color);
   border-radius: 50%;
+  background: transparent;
   color: var(--text-primary);
+  padding: 0;
   transition: all 0.3s;
 }
 
-#theme-icon:hover {
+.icon-btn:hover {
   color: var(--accent);
   border-color: var(--accent);
   background: var(--accent-soft);
+}
+
+#theme-toggle {
+  margin-left: 16px !important;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+.icon-btn:focus-visible,
+label.form-check-label:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* ---------- Mobile Menu ---------- */
@@ -180,6 +207,10 @@ a {
 }
 
 .close-menu {
+  background: none;
+  border: none;
+  line-height: 1;
+  padding: 0;
   position: absolute;
   top: 15px;
   right: 20px;
@@ -733,6 +764,11 @@ a {
   flex: 0 0 62%;
 }
 
+/* No figure in this block: let the text use the full width */
+.methodology-container > .methodology-text:only-child {
+  flex: 1 1 100%;
+}
+
 .methodology-label {
   font-weight: 700;
   color: var(--accent-strong);
@@ -900,9 +936,9 @@ footer .social-link:hover {
   }
 
   .three-dot {
-    display: block;
+    display: inline-flex;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-left: 10px;
     color: var(--text-primary);
   }
@@ -980,5 +1016,33 @@ footer .social-link:hover {
 
   .mobile-menu {
     display: none;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .publication:hover,
+  .card:hover,
+  .research-card:hover,
+  .project-card:hover,
+  .achievement-item:hover,
+  .profile-img:hover,
+  .workshop-gallery img:hover,
+  .about-info .btn:hover,
+  .buttons-area .btn:hover,
+  .close-menu:hover {
+    transform: none;
   }
 }
