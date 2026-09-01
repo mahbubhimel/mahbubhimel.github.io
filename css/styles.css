@@ -69,8 +69,7 @@ html {
 
 /* Anchor targets clear the fixed navbar */
 .section-title,
-#about,
-[id] {
+.about-container {
   scroll-margin-top: 100px;
 }
 
@@ -619,8 +618,21 @@ label.form-check-label:focus-within {
   color: #0f172a;
 }
 
+/* Keep the radios focusable (display:none would drop them from the tab order)
+   while the label renders the visible pill. */
 .pub-filter input.form-check-input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  clip-path: inset(50%);
+}
+
+.pub-filter label.form-check-label:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .publication {
@@ -980,6 +992,11 @@ footer .social-link:hover {
 
   .section-title {
     font-size: 1.3rem;
+  }
+
+  .section-title,
+  .about-container {
+    scroll-margin-top: 80px;
   }
 
   .timeline {
