@@ -22,9 +22,11 @@ function toggleTheme() {
 }
 
 function filterPubs(type) {
+  let shown = 0;
   document.querySelectorAll(".publication").forEach((pub) => {
     if (type === "all" || pub.classList.contains(type)) {
       pub.style.display = "block";
+      replayReveal(pub, shown++);
     } else {
       pub.style.display = "none";
     }
@@ -69,3 +71,52 @@ const savedTheme = localStorage.getItem("theme") || "light";
 document.documentElement.setAttribute("data-theme", savedTheme);
 document.getElementById("theme-icon").className =
   savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+
+// Scroll reveal: blocks below the fold at load fade up as they enter the
+// viewport. Anything already on screen is left alone (no flicker), and with
+// reduced motion (or no JS) the page simply renders as-is.
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+
+const revealObserver = reduceMotion
+  ? null
+  : new IntersectionObserver(
+      (entries, observer) => {
+        entries
+          .filter((entry) => entry.isIntersecting)
+          .forEach((entry, i) => {
+            entry.target.style.setProperty(
+              "--reveal-delay",
+              Math.min(i, 5) * 70 + "ms"
+            );
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+      },
+      { rootMargin: "0px 0px -8% 0px" }
+    );
+
+if (revealObserver) {
+  document
+    .querySelectorAll(
+      ".section-title, .research-card, .card, .project-card, .achievement-item, .workshop-card, .publication, footer"
+    )
+    .forEach((el) => {
+      if (el.getBoundingClientRect().top > window.innerHeight) {
+        el.classList.add("reveal");
+        revealObserver.observe(el);
+      }
+    });
+}
+
+// Replay the fade-up on a publication, e.g. when the filter changes
+function replayReveal(el, i) {
+  if (!revealObserver) return;
+  revealObserver.unobserve(el);
+  el.classList.add("reveal", "is-visible");
+  el.style.setProperty("--reveal-delay", Math.min(i, 5) * 50 + "ms");
+  el.style.animation = "none";
+  void el.offsetWidth; // force a reflow so the animation restarts
+  el.style.animation = "";
+}

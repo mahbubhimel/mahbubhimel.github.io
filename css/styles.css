@@ -28,6 +28,7 @@
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
   --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.12);
   --navbar-bg: rgba(248, 249, 252, 0.92);
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 [data-theme="dark"] {
@@ -345,11 +346,24 @@ label.form-check-label:focus-within {
   align-items: center;
   gap: 12px;
   width: 100%;
+  position: relative;
 }
 
 .section-title i {
   color: var(--accent);
   font-size: 1.5rem;
+}
+
+/* Gold underline segment that meets the left accent border */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: -1px;
+  width: 72px;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left center;
 }
 
 /* ---------- Research Interest Cards ---------- */
@@ -697,6 +711,19 @@ label.form-check-label:focus-within {
   line-height: 1.45;
 }
 
+.pub-authors {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: -4px 0 8px;
+}
+
+.pub-authors strong {
+  color: var(--heading-color);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .pub-metadata {
   font-size: 0.85rem;
   color: var(--text-secondary);
@@ -941,6 +968,101 @@ footer .social-link:hover {
   transform: translateY(-3px);
 }
 
+/* ---------- Motion ---------- */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes draw-line {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+/* Hero eases in on load (CSS only, so it never waits on JS) */
+.about-info > *,
+.about-img {
+  animation: rise-in 0.6s var(--ease-out) backwards;
+}
+
+.about-info > :nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.about-info > :nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.about-info > :nth-child(4) {
+  animation-delay: 180ms;
+}
+
+.about-info > :nth-child(5) {
+  animation-delay: 240ms;
+}
+
+.about-info > :nth-child(n + 6) {
+  animation-delay: 300ms;
+}
+
+.about-img {
+  animation-delay: 150ms;
+}
+
+/* Scroll reveal: main.js adds .reveal to blocks below the fold, then
+   .is-visible as each enters the viewport. Hidden = the paused first
+   keyframe, so no underlying style changes and the cards' `transition: all`
+   never fires; fill-mode backwards leaves nothing behind, so hover
+   transforms work again once the animation ends. */
+.reveal {
+  animation: rise-in 0.6s var(--ease-out) var(--reveal-delay, 0s) backwards
+    paused;
+}
+
+.reveal.is-visible {
+  animation-play-state: running;
+}
+
+.section-title.reveal::after {
+  animation: draw-line 0.7s var(--ease-out)
+    calc(var(--reveal-delay, 0s) + 250ms) backwards paused;
+}
+
+.section-title.reveal.is-visible::after {
+  animation-play-state: running;
+}
+
+/* Gold reading-progress bar under the navbar (scroll-driven, no JS;
+   browsers without support simply don't show it) */
+@supports (animation-timeline: scroll()) {
+  @keyframes read-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .navbar-custom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: var(--accent);
+    transform-origin: left center;
+    transform: scaleX(0); /* stays hidden if the page can't scroll */
+    animation: read-progress 1ms linear both;
+    /* must follow the shorthand, which resets it */
+    animation-timeline: scroll(root);
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .navbar-custom a.desktop {
@@ -1061,5 +1183,23 @@ footer .social-link:hover {
   .buttons-area .btn:hover,
   .close-menu:hover {
     transform: none;
+  }
+
+  /* Entrance/reveal animations off entirely (the progress bar stays: it
+     only moves as the reader scrolls) */
+  .about-info > *,
+  .about-img,
+  .reveal,
+  .reveal::after {
+    animation: none !important;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  /* Blocks never scrolled into view would otherwise print blank */
+  .reveal,
+  .reveal::after {
+    animation: none !important;
   }
 }
