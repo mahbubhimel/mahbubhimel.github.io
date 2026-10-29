@@ -199,6 +199,14 @@
           >
             <i class="fas fa-feather-pointed me-2"></i> ACL Anthology
           </a>
+          <a
+            href="https://huggingface.co/mahbubhimel"
+            target="_blank"
+            class="btn btn-outline-warning btn-sm rounded-pill px-4"
+          >
+            <img src="huggingface.svg" alt="" class="hf-logo me-2" /> Hugging
+            Face
+          </a>
         </div>
         <div
           class="mt-4 p-3"
@@ -700,43 +708,58 @@
         </button>
       </div>
       <div class="details abs">
-        Bangla culture is richly expressed through region, dialect, history, food, politics, media,
-        and everyday visual life, yet it remains underrepresented in multimodal evaluation. To address this gap, we introduce BANGLAVERSE, a
-        culturally grounded benchmark for evaluating
-        multilingual vision–language models (VLMs)
-        on Bengali culture across historically linked
-        languages and regional dialects. Built from
-        1,152 manually curated images across nine domains, the benchmark supports visual question
-        answering and captioning, and is expanded into
-        four languages and five Bangla dialects, yielding ∼32.2K artifacts. Our experiments show
-        that evaluating only standard Bangla overestimates true model capability: performance
-        drops under dialectal variation, especially for
-        caption generation, while historically linked
-        languages such as Hindi and Urdu retain some
-        cultural meaning but remain weaker for structured reasoning. Across domains, the main bottleneck is missing cultural knowledge rather
-        than visual grounding alone, with knowledgeintensive categories. These findings position
-        BANGLAVERSE as a more realistic test bed for
-        measuring culturally grounded multimodal understanding under linguistic variation.
+        Bangla culture is richly expressed through region, dialect, history,
+        food, politics, media, and everyday visual life, yet it remains
+        underrepresented in multimodal evaluation. To address this gap, we
+        introduce BanglaVerse, a culturally grounded benchmark for evaluating
+        multilingual vision–language models (VLMs) on Bengali culture across
+        historically linked languages and regional dialects. Built from 1,152
+        manually curated images across nine domains, the benchmark supports
+        visual question answering and captioning, and is expanded into four
+        languages and five Bangla dialects, yielding ∼32.2K artifacts. Our
+        experiments show that evaluating only standard Bangla overestimates true
+        model capability: performance drops under dialectal variation,
+        especially for caption generation, while historically linked languages
+        such as Hindi and Urdu retain some cultural meaning but remain weaker
+        for structured reasoning. Across domains, the main bottleneck is missing
+        cultural knowledge rather than visual grounding alone, with
+        knowledge-intensive categories. These findings position BanglaVerse as a
+        more realistic test bed for measuring culturally grounded multimodal
+        understanding under linguistic variation.
       </div>
       <div class="details bib">
         <pre>
-@misc{sayeedi2026dialectslanguagesculturallens,
-      title={Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects}, 
-      author={Nurul Labib Sayeedi and Md. Faiyaz Abdullah Sayeedi and Shubhashis Roy Dipta and Mahbub E Sobhani and Rubaya Tabassum and Ariful Ekraj Hridoy and Mehraj Mahmood and Md. Tarek Hasan and Swakkhar Shatabda},
-      year={2026},
-      eprint={2603.21165},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2603.21165},
-      note={Accepted at EMNLP 2026 (Findings)},
+@inproceedings{sayeedi-etal-2026-many,
+    title = "Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual {VLM}s for {B}engali Culture Understanding Across Historically Linked Languages and Regional Dialects",
+    author = "Sayeedi, Nurul Labib  and
+      Sayeedi, Md. Faiyaz Abdullah  and
+      Roy Dipta, Shubhashis  and
+      E Sobhani, Mahbub  and
+      Tabassum, Rubaya  and
+      Hridoy, Ariful Ekraj  and
+      Mahmood, Mehraj  and
+      Hasan, Md. Tarek  and
+      Shatabda, Swakkhar",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2026",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-emnlp.2129/",
+    pages = "45421--45454",
+    ISBN = "979-8-89176-462-0"
 }
         </pre>
       </div>
       <div class="details paper">
         <p>
           <strong>Paper Link:</strong>
-          <a href="https://arxiv.org/abs/2603.21165" target="_blank"
-            >https://arxiv.org/abs/2603.21165</a
+          <a href="https://aclanthology.org/2026.findings-emnlp.2129/" target="_blank"
+            >https://aclanthology.org/2026.findings-emnlp.2129/</a
           >
         </p>
       </div>
@@ -932,14 +955,16 @@
         significant gaps in assessing multilingual and cross-lingual
         mathematical reasoning. To address this, we introduce MathMist, a
         parallel multilingual benchmark for mathematical problem solving and
-        reasoning. MathMist encompasses over 21K aligned question-answer pairs
-        across seven languages, representing a balanced coverage of high-,
+        reasoning. MathMist encompasses 2,890 parallel Bangla-English gold
+        standard artifacts, totaling ≈30K aligned question–answer pairs across
+        thirteen languages, representing an extensive coverage of high-,
         medium-, and low-resource linguistic settings. The dataset captures
         linguistic variety, multiple types of problem settings, and solution
         synthesizing capabilities. We systematically evaluate a diverse suite of
         models, including open-source small and medium LLMs, proprietary
-        systems, and multilingual-reasoning-focused models, under zero-shot,
-        chain-of-thought (CoT), and code-switched reasoning paradigms. Our
+        systems, and multilingual-reasoning-focused models under zero-shot,
+        chain-of-thought (CoT), perturbated reasoning, and code-switched
+        reasoning paradigms. Our
         results reveal persistent deficiencies in LLMs' ability to perform
         consistent and interpretable mathematical reasoning across languages,
         with pronounced degradation in low-resource settings. All the codes and
@@ -947,11 +972,25 @@
       </div>
       <div class="details bib">
         <pre>
-@article{sobhani2025mathmist,
-  title={MathMist: A Parallel Multilingual Benchmark Dataset for Mathematical Problem Solving and Reasoning},
-  author={Sobhani, Mahbub E and Sayeedi, Md Faiyaz Abdullah and Mohiuddin, Tasnim and Islam, Md Mofijul and Shatabda, Swakkhar},
-  journal={arXiv preprint arXiv:2510.14305},
-  year={2025}
+@inproceedings{e-sobhani-etal-2026-mathmist,
+    title = "{M}ath{M}ist: A Parallel Multilingual Benchmark Dataset for Mathematical Problem Solving and Reasoning",
+    author = "E Sobhani, Mahbub  and
+      Sayeedi, Md. Faiyaz Abdullah  and
+      Mohiuddin, Tasnim  and
+      Islam, Md Mofijul  and
+      Shatabda, Swakkhar",
+    editor = "Demberg, Vera  and
+      Inui, Kentaro  and
+      Marquez, Llu{\'i}s",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-eacl.131/",
+    doi = "10.18653/v1/2026.findings-eacl.131",
+    pages = "2524--2550",
+    ISBN = "979-8-89176-386-9"
 }
       </pre
         >
@@ -1051,11 +1090,25 @@
       </div>
       <div class="details bib">
         <pre>
-@article{sobhani2025multi,
-  title={Do Multi-Agents Solve Better Than Single? Evaluating Agentic Frameworks for Diagram-Grounded Geometry Problem Solving and Reasoning},
-  author={Sobhani, Mahbub E and Sayeedi, Md Faiyaz Abdullah and Alam, Mohammad Nehad and Progga, Proma Hossain and Shatabda, Swakkhar},
-  journal={arXiv preprint arXiv:2512.16698},
-  year={2025}
+@inproceedings{e-sobhani-etal-2026-multi,
+    title = "Do Multi-Agents Solve Better Than Single? Evaluating Agentic Frameworks for Diagram-Grounded Geometry Problem Solving and Reasoning",
+    author = "E Sobhani, Mahbub  and
+      Sayeedi, Md. Faiyaz Abdullah  and
+      Alam, Mohammad Nehad  and
+      Progga, Proma Hossain  and
+      Shatabda, Swakkhar",
+    editor = "Baez Santamaria, Selene  and
+      Somayajula, Sai Ashish  and
+      Yamaguchi, Atsuki",
+    booktitle = "Proceedings of the 19th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics (Volume 4: Student Research Workshop)",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.eacl-srw.4/",
+    doi = "10.18653/v1/2026.eacl-srw.4",
+    pages = "27--47",
+    ISBN = "979-8-89176-383-8"
 }
       </pre
         >
@@ -1571,6 +1624,115 @@
       <div class="pub-metadata">
         ARR October Cycle 2026 | Conference Paper | Under Review
       </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this, 'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Many NP-complete (NPC) problems have a polynomial-time (P) twin that
+        differs in a single structural detail, such as 3- versus 2-colouring a
+        graph. A model that reasons rather than recalls should notice which side
+        of this boundary a problem falls on, yet existing benchmarks either fix
+        the wording of each task or ignore its complexity class, so they cannot
+        separate the two. We introduce P2NPCBench, a benchmark of 12 problem
+        families in which every NPC problem is paired with a P twin in the same
+        problem setting. To remove the textbook cues that enable recall, we
+        build it with AgentGAN, an adversarial multi-agent framework in which a
+        generator rewrites each statement until a panel of frozen code models
+        fails, while an executable validity gate keeps every rewrite answer- and
+        class-preserving. The result is 2,114 hardened statements with
+        human-verified reference solvers. Evaluating 12 proprietary and
+        open-source models, we find that every model scores lower on NPC
+        statements than on their P twins (35.4% vs. 63.8% pass@1), and that
+        95.1% of model–family pairs fail more often on the NPC side. A tenfold
+        time limit raises NPC accuracy only from 28.5% to 31.9%. Hardening
+        lowers accuracy on both classes, more on P statements (29.6 points) than
+        on NPC statements (19.5 points). Finally, we build a failure taxonomy,
+        where runtime errors are the largest NPC failure type (44.1%), and
+        nearly half of them (46.5%) come from malformed or truncated code.
+      </div>
+      <div class="details bib">
+        <pre>
+@misc{sayeedi2026didproblemactuallyharder,
+      title={Did the Problem Actually Get Harder? Testing LLMs on Paired P and NP-Complete Problems Hardened by Adversarial Multi-Agent Rewriting},
+      author={Nurul Labib Sayeedi and Md. Faiyaz Abdullah Sayeedi and Zabir Al Nazi and Mahbub E Sobhani and Shubhashis Roy Dipta},
+      year={2026},
+      eprint={2610.30103},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2610.30103},
+}
+        </pre>
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/abs/2610.30103" target="_blank"
+            >https://arxiv.org/abs/2610.30103</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="Figures/NP_Bench.png"
+              alt="P2NPCBench construction: seed pool of matched NPC/P pairs, the AgentGAN adversarial rewriting loop, the final benchmark, and evaluation"
+            />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Overview of P2NPCBench and the AgentGAN framework. (Seed Pool)
+              Problems collected from standard catalogues and textbooks are
+              adapted to a uniform competitive-programming format with explicit
+              I/O, forming 12 families of matched pairs in which each
+              NP-complete problem (e.g. 3-colouring) has a polynomial-time twin
+              (e.g. 2-colouring), each with a human-verified reference solution.
+              (AgentGAN) A Generator rewrites each seed to remove textbook cues
+              using 11 pre-defined strategies from existing literature; a Valid
+              Gate applies hard checks (reference passes on examples, held-out
+              solve, bounds and I/O kept, no class leak) and grades each rewrite
+              as unambiguous, complete, faithful, and natural; an Expert Council
+              (a frontier coding agent) sends rejected rewrites back for
+              revision; and a Discriminator panel of fixed models tries to solve
+              each accepted statement. Statements the panel still solves go
+              through Shortcut Analysis, an Adversarial Engine keeps inputs that
+              break the survivors, and a Lineage Memory of past depths, wins,
+              and dead ends guides the next round. (P2NPCBench) The result is
+              2,114 hardened statements (1,003 NPC, 1,111 P) with 849 test cases
+              and NPC time limits of 1s, 2s, 5s, and 10s. (Evaluation) 12 models
+              are evaluated on the final benchmark with pass@1.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Journal Publications -->
@@ -1998,6 +2160,14 @@
                 title="ACL Anthology"
               >
                 <i class="fas fa-feather-pointed"></i>
+              </a>
+              <a
+                href="https://huggingface.co/mahbubhimel"
+                target="_blank"
+                class="social-link"
+                title="Hugging Face"
+              >
+                <img src="huggingface.svg" alt="Hugging Face" class="hf-logo" />
               </a>
               <a
                 href="mailto:msobhani2410011@mscse.uiu.ac.bd"

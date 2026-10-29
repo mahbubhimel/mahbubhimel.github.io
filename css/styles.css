@@ -968,6 +968,13 @@ footer .social-link:hover {
   transform: translateY(-3px);
 }
 
+/* Hugging Face logo (no Font Awesome icon exists): sized like an icon glyph */
+.hf-logo {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+}
+
 /* ---------- Motion ---------- */
 @keyframes rise-in {
   from {
