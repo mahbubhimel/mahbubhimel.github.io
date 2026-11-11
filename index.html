@@ -1471,6 +1471,13 @@
     <div class="publication conf">
       <span class="pub-badge bg-warning text-dark">EACL</span>
       <span class="pub-badge bg-secondary">Committed</span>
+      <a
+        class="pub-badge pub-funded"
+        href="#projects"
+        title="Government-funded research: see Funded Projects"
+        ><i class="fas fa-hand-holding-dollar me-1" aria-hidden="true"></i
+        >Govt. Funded</a
+      >
       <div class="pub-title">
         Time Present and Time Past: Benchmarking Large Language Models on
         Temporally Evolving Document Understanding
@@ -1482,6 +1489,10 @@
       </div>
       <div class="pub-metadata">
         Committed to EACL 2027 (via ARR) | Conference Paper
+      </div>
+      <div class="pub-funding">
+        Funded by the University Grants Commission of Bangladesh (ICSETEP
+        Research &amp; Development Grant)
       </div>
       <div class="buttons-area">
         <button
@@ -1738,16 +1749,47 @@
     <!-- Journal Publications -->
     <div class="publication journal">
       <span class="pub-badge">PLOS ONE</span>
-      <span class="pub-badge bg-secondary">Accepted</span>
+      <span class="pub-badge bg-secondary">2026</span>
+      <a
+        class="pub-badge pub-funded"
+        href="#projects"
+        title="Government-funded research: see Funded Projects"
+        ><i class="fas fa-hand-holding-dollar me-1" aria-hidden="true"></i
+        >Govt. Funded</a
+      >
       <div class="pub-title">
         BanglaHateCorpus: A large-scale Bangla benchmark for hate speech
         classification and a transformer-based deep learning method
       </div>
+      <div class="pub-authors">
+        Anika Tasnim Rodela, <strong>Mahbub E Sobhani</strong>, Sakif Naieb
+        Raiyan, Mohammad Nurul Huda, Dewan Md. Farid
+      </div>
       <div class="pub-metadata">
-        Journal Article | Accepted (In Press) | IF: 2.6 &middot; CiteScore:
-        5.4 [Q1 | SCI-E]
+        Journal Article | IF: 2.6 &middot; CiteScore: 5.4 [Q1 | SCI-E]
+      </div>
+      <div class="pub-funding">
+        Funded by the ICT Division, Government of Bangladesh
       </div>
       <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
         <button
           class="btn btn-sm btn-outline-info"
           onclick="showDetails(this, 'methodology')"
@@ -1755,16 +1797,84 @@
           <i class="fas fa-project-diagram me-1"></i>Methodology
         </button>
       </div>
+      <div class="details abs">
+        Hate speech on social media refers to content that threatens, attacks,
+        or dehumanizes people or groups based on specified characteristics,
+        thereby eroding trust, worsening societal divisions, and causing
+        psychological harm to the targeted communities. In digitally connected
+        South Asian societies, strong in-group bonds and online inter-group
+        hatred can rapidly lead to real-world violence, a risk intensified by
+        the proliferation of Bangla texts, highlighting the urgent need for
+        robust detection in this low-resource language. Previous studies have
+        mostly focused on building their datasets by scraping various sources,
+        without emphasizing standardized quality annotation or ensuring
+        classification accuracy. To address these gaps, we introduce
+        BanglaHateCorpus, a unified corpus of 168K examples consolidated from
+        eight public sources, rigorously de-duplicated and annotated through a
+        two-stage, human and LLM-assisted pipeline. Building on this benchmark,
+        we propose BanHateFormer, a novel deep-learning model that embodies
+        state-of-the-art transformer components, and replaces the conventional
+        feed-forward blocks with a Mixture-of-Experts layer followed by a binary
+        classification head. BanHateFormer achieves state-of-the-art
+        classification results, as assessed by accuracy, precision, recall, and
+        macro F1-score with approximately 94.74 times fewer parameters than
+        comparable models, achieving a 91.33% macro F1-score on the
+        BanglaHateCorpus dataset and 78.96% on the transliterated BanTH
+        benchmark. BanHateFormer outperforms BanglaBERT and XLM-RoBERTa by up to
+        2.57% with three times fewer parameters, and improves macro F1-score by
+        3.38% on transliterated text, demonstrating strong performance on
+        romanized inputs. BanHateFormer significantly surpasses existing
+        transformer-based models in balancing memory efficiency and
+        high-fidelity outputs, marking a breakthrough in hate speech
+        classification with optimal space utilization.
+      </div>
+      <div class="details bib">
+        <pre>
+@article{rodela2026banglahatecorpus,
+  title={BanglaHateCorpus: A large-scale bangla benchmark for hate speech classification and a transformer-based deep learning method},
+  author={Rodela, Anika Tasnim and Sobhani, Mahbub E and Raiyan, Sakif Naieb and Huda, Mohammad Nurul and Farid, Dewan Md},
+  journal={PloS one},
+  volume={21},
+  number={11},
+  pages={e0361339},
+  year={2026},
+  publisher={Public Library of Science, San Francisco, CA USA}
+}</pre
+        >
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a
+            href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0361339"
+            target="_blank"
+            >https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0361339</a
+          >
+        </p>
+      </div>
       <div class="details methodology">
         <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="Figures/BanglaHateCorpus.png"
+              alt="BanHateFormer architecture: tokenizer, embedding, RMSNorm multi-head attention, mixture-of-experts feed-forward layers, linear-softmax head, and evaluation metrics"
+            />
+          </div>
           <div class="methodology-text">
             <span class="methodology-label"
               ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
             >
             <p>
-              Large-scale corpus of 50,000+ annotated Bangla samples for hate
-              speech detection, validated through inter-annotator agreement
-              protocols achieving κ > 0.85.
+              Bangla text is tokenized and embedded, then sequentially
+              processed through RMSNorm-normalized multi-head attention blocks
+              with residual connections, gated feed-forward layers (FFN1–FFN4),
+              and a mixture-of-experts module before the final linear-softmax
+              output. Evaluation pipeline measuring model performance via
+              accuracy, precision, recall, and F1-score. This figure contrasts
+              the structural components of our proposed model with its
+              corresponding assessment workflow.
             </p>
           </div>
         </div>
@@ -1774,6 +1884,13 @@
     <div class="publication journal">
       <span class="pub-badge">Neural Networks</span>
       <span class="pub-badge bg-secondary">2026</span>
+      <a
+        class="pub-badge pub-funded"
+        href="#projects"
+        title="Government-funded research: see Funded Projects"
+        ><i class="fas fa-hand-holding-dollar me-1" aria-hidden="true"></i
+        >Govt. Funded</a
+      >
       <div class="pub-title">
         TextEconomizer: Enhancing lossy text compression with denoising transformers and entropy coding
       </div>
@@ -1783,6 +1900,9 @@
       </div>
       <div class="pub-metadata">
         Journal Article | IF: 7.2 &middot; CiteScore: 10.9 [Q1 | SCI-E]
+      </div>
+      <div class="pub-funding">
+        Funded by the ICT Division, Government of Bangladesh
       </div>
       <div class="buttons-area">
         <button
