@@ -668,6 +668,160 @@
 
     <!-- Conference Publications -->
     <div class="publication conf">
+      <span class="pub-badge bg-success">EACL</span>
+      <span class="pub-badge bg-secondary">2027</span>
+      <div class="pub-title">
+        BanTMedQA: A Multimodal Benchmark for Open Ended Bangla Medical
+        Question Answering
+      </div>
+      <div class="pub-authors">
+        Rafid Ahmed, Md. Faiyaz Abdullah Sayeedi, Fariha Anjum Shifa, Mir
+        Sazzat Hossain, Faria Iffat Reshma, <strong>Mahbub E Sobhani</strong>,
+        Md Fahim, Md Farhad Alam Bhuiyan
+      </div>
+      <div class="pub-metadata">
+        EACL 2027 (Main Conference) | Conference Paper
+      </div>
+    </div>
+
+    <div class="publication conf">
+      <span class="pub-badge bg-success">EACL</span>
+      <span class="pub-badge bg-secondary">2027</span>
+      <a
+        class="pub-badge pub-funded"
+        href="#projects"
+        title="Government-funded research: see Funded Projects"
+        ><i class="fas fa-hand-holding-dollar me-1" aria-hidden="true"></i
+        >Govt. Funded</a
+      >
+      <div class="pub-title">
+        Time Present and Time Past: Benchmarking Large Language Models on
+        Temporally Evolving Document Understanding
+      </div>
+      <div class="pub-authors">
+        <strong>Mahbub E Sobhani</strong>, Md. Faiyaz Abdullah Sayeedi, Fahmid
+        Hasan Chowdhury, Md Adnan Arefeen, Farig Sadeque, Md. Faizul Bari,
+        Swakkhar Shatabda
+      </div>
+      <div class="pub-metadata">
+        EACL 2027 (Findings) | Conference Paper
+      </div>
+      <div class="pub-funding">
+        Funded by the University Grants Commission of Bangladesh (ICSETEP
+        Research &amp; Development Grant)
+      </div>
+      <div class="buttons-area">
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'abs')"
+        >
+          <i class="fas fa-align-left me-1"></i>Abstract
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'bib')"
+        >
+          <i class="fas fa-quote-right me-1"></i>Citation
+        </button>
+        <button
+          class="btn btn-sm btn-outline-primary"
+          onclick="showDetails(this, 'paper')"
+        >
+          <i class="fas fa-file-pdf me-1"></i>Paper
+        </button>
+        <button
+          class="btn btn-sm btn-outline-info"
+          onclick="showDetails(this, 'methodology')"
+        >
+          <i class="fas fa-project-diagram me-1"></i>Methodology
+        </button>
+      </div>
+      <div class="details abs">
+        Evolving documents, such as laws, tax codes, and software documentation,
+        are amended, replaced, and sometimes reverted over time, so a question
+        has different correct answers at different dates. In contrast to
+        encyclopedic knowledge, where an old fact is simply overwritten, an
+        amendment is itself an official text that states what it replaces and
+        when it takes effect, and the earlier version stays correct for its
+        validity period. The central challenge is therefore version resolution,
+        that is, identifying the version in force on the queried date. Existing
+        temporal QA datasets treat time only as an annotation, so version
+        resolution stays untested. We present TIDE, an expert-verified benchmark
+        of 3,050 QA pairs over 644 official customs instruments issued between
+        1969 and 2025 by the Government of Bangladesh, covering eight task types
+        over deeply code-mixed documents that are heterogeneous in layout and
+        dated in two calendars. In addition, we evaluate nine recent LLMs under a
+        single protocol across parametric, gold-context, and retrieval access,
+        scored by a three-judge LLM council with a hard date gate separating
+        correct meaning from correct time. The best macro-averaged accuracy is
+        only 68.5%. Resolving a version from an implicit date reaches 59.7%, and
+        detecting that the supplied version does not govern the query reaches
+        only 26.7%. Models are more likely to find correct versions than to
+        reject incorrect ones, and they tend to follow a confident parametric
+        answer over the supplied authoritative text. All code and data are
+        available at https://github.com/icsetepa44/TIDE
+      </div>
+      <div class="details bib">
+        <pre>
+@misc{sobhani2026timepresenttimepast,
+      title={Time Present and Time Past: Benchmarking Large Language Models on Temporally Evolving Document Understanding},
+      author={Mahbub E Sobhani and Md. Faiyaz Abdullah Sayeedi and Fahmid Hasan Chowdhury and Md Adnan Arefeen and Farig Sadeque and Md. Faizul Bari and Swakkhar Shatabda},
+      year={2026},
+      eprint={2608.08512},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2608.08512},
+      note={Accepted at EACL 2027 (Findings)},
+}
+        </pre>
+      </div>
+      <div class="details paper">
+        <p>
+          <strong>Paper Link:</strong>
+          <a href="https://arxiv.org/abs/2608.08512" target="_blank"
+            >https://arxiv.org/abs/2608.08512</a
+          >
+        </p>
+      </div>
+      <div class="details methodology">
+        <div class="methodology-container">
+          <div class="methodology-image">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="Figures/TIDE.png"
+              alt="TIDE benchmark: corpus construction, amendment timeline, eight task types, and three-condition evaluation"
+            />
+          </div>
+          <div class="methodology-text">
+            <span class="methodology-label"
+              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
+            >
+            <p>
+              Overview of the TIDE benchmark. (a) Corpus construction parses 644
+              official customs instruments issued between 1969 and 2025 (3 Acts,
+              20 GOs, 609 SROs, 12 Rules) into clauses, tables, and metadata,
+              then clusters them by entity and concept to build amendment
+              threads and generate temporally grounded question-answer pairs,
+              verified by 13 volunteer annotators to yield 3,050 expert-verified
+              QA items. (b) An amendment timeline illustrates the core
+              challenge: each amendment states what it replaces and when it
+              takes effect, so every version stays correct for its own validity
+              period, and temporal drift emerges between the benchmark cut-off
+              and the model knowledge cut-off. (c) Eight task types probe
+              version resolution from different angles, including temporal MCQ,
+              relative-time QA, event sorting, perturbation detection, and
+              context misalignment. (d) Evaluation runs nine recent LLMs under
+              parametric, gold-context, and RAG access, scored by a three-judge
+              LLM council with a hard date gate that zeroes out answers with the
+              wrong effective date.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication conf">
       <span class="pub-badge bg-success">EMNLP</span>
       <span class="pub-badge bg-secondary">2026</span>
       <div class="pub-title">
@@ -1467,160 +1621,7 @@
       </div>
     </div>
 
-    <!-- Committed / under review conferences (committed first) -->
-    <div class="publication conf">
-      <span class="pub-badge bg-warning text-dark">EACL</span>
-      <span class="pub-badge bg-secondary">Committed</span>
-      <a
-        class="pub-badge pub-funded"
-        href="#projects"
-        title="Government-funded research: see Funded Projects"
-        ><i class="fas fa-hand-holding-dollar me-1" aria-hidden="true"></i
-        >Govt. Funded</a
-      >
-      <div class="pub-title">
-        Time Present and Time Past: Benchmarking Large Language Models on
-        Temporally Evolving Document Understanding
-      </div>
-      <div class="pub-authors">
-        <strong>Mahbub E Sobhani</strong>, Md. Faiyaz Abdullah Sayeedi, Fahmid
-        Hasan Chowdhury, Md Adnan Arefeen, Farig Sadeque, Md. Faizul Bari,
-        Swakkhar Shatabda
-      </div>
-      <div class="pub-metadata">
-        Committed to EACL 2027 (via ARR) | Conference Paper
-      </div>
-      <div class="pub-funding">
-        Funded by the University Grants Commission of Bangladesh (ICSETEP
-        Research &amp; Development Grant)
-      </div>
-      <div class="buttons-area">
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'abs')"
-        >
-          <i class="fas fa-align-left me-1"></i>Abstract
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'bib')"
-        >
-          <i class="fas fa-quote-right me-1"></i>Citation
-        </button>
-        <button
-          class="btn btn-sm btn-outline-primary"
-          onclick="showDetails(this, 'paper')"
-        >
-          <i class="fas fa-file-pdf me-1"></i>Paper
-        </button>
-        <button
-          class="btn btn-sm btn-outline-info"
-          onclick="showDetails(this, 'methodology')"
-        >
-          <i class="fas fa-project-diagram me-1"></i>Methodology
-        </button>
-      </div>
-      <div class="details abs">
-        Evolving documents, such as laws, tax codes, and software documentation,
-        are amended, replaced, and sometimes reverted over time, so a question
-        has different correct answers at different dates. In contrast to
-        encyclopedic knowledge, where an old fact is simply overwritten, an
-        amendment is itself an official text that states what it replaces and
-        when it takes effect, and the earlier version stays correct for its
-        validity period. The central challenge is therefore version resolution,
-        that is, identifying the version in force on the queried date. Existing
-        temporal QA datasets treat time only as an annotation, so version
-        resolution stays untested. We present TIDE, an expert-verified benchmark
-        of 3,050 QA pairs over 644 official customs instruments issued between
-        1969 and 2025 by the Government of Bangladesh, covering eight task types
-        over deeply code-mixed documents that are heterogeneous in layout and
-        dated in two calendars. In addition, we evaluate nine recent LLMs under a
-        single protocol across parametric, gold-context, and retrieval access,
-        scored by a three-judge LLM council with a hard date gate separating
-        correct meaning from correct time. The best macro-averaged accuracy is
-        only 68.5%. Resolving a version from an implicit date reaches 59.7%, and
-        detecting that the supplied version does not govern the query reaches
-        only 26.7%. Models are more likely to find correct versions than to
-        reject incorrect ones, and they tend to follow a confident parametric
-        answer over the supplied authoritative text. All code and data are
-        available at https://github.com/icsetepa44/TIDE
-      </div>
-      <div class="details bib">
-        <pre>
-@misc{sobhani2026timepresenttimepast,
-      title={Time Present and Time Past: Benchmarking Large Language Models on Temporally Evolving Document Understanding},
-      author={Mahbub E Sobhani and Md. Faiyaz Abdullah Sayeedi and Fahmid Hasan Chowdhury and Md Adnan Arefeen and Farig Sadeque and Md. Faizul Bari and Swakkhar Shatabda},
-      year={2026},
-      eprint={2608.08512},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2608.08512},
-}
-        </pre>
-      </div>
-      <div class="details paper">
-        <p>
-          <strong>Paper Link:</strong>
-          <a href="https://arxiv.org/abs/2608.08512" target="_blank"
-            >https://arxiv.org/abs/2608.08512</a
-          >
-        </p>
-      </div>
-      <div class="details methodology">
-        <div class="methodology-container">
-          <div class="methodology-image">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="Figures/TIDE.png"
-              alt="TIDE benchmark: corpus construction, amendment timeline, eight task types, and three-condition evaluation"
-            />
-          </div>
-          <div class="methodology-text">
-            <span class="methodology-label"
-              ><i class="fas fa-microscope me-2"></i>Research Methodology:</span
-            >
-            <p>
-              Overview of the TIDE benchmark. (a) Corpus construction parses 644
-              official customs instruments issued between 1969 and 2025 (3 Acts,
-              20 GOs, 609 SROs, 12 Rules) into clauses, tables, and metadata,
-              then clusters them by entity and concept to build amendment
-              threads and generate temporally grounded question-answer pairs,
-              verified by 13 volunteer annotators to yield 3,050 expert-verified
-              QA items. (b) An amendment timeline illustrates the core
-              challenge: each amendment states what it replaces and when it
-              takes effect, so every version stays correct for its own validity
-              period, and temporal drift emerges between the benchmark cut-off
-              and the model knowledge cut-off. (c) Eight task types probe
-              version resolution from different angles, including temporal MCQ,
-              relative-time QA, event sorting, perturbation detection, and
-              context misalignment. (d) Evaluation runs nine recent LLMs under
-              parametric, gold-context, and RAG access, scored by a three-judge
-              LLM council with a hard date gate that zeroes out answers with the
-              wrong effective date.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="publication conf">
-      <span class="pub-badge bg-warning text-dark">EACL</span>
-      <span class="pub-badge bg-secondary">Committed</span>
-      <div class="pub-title">
-        BanTMedQA: A Multimodal Benchmark for Open Ended Bangla Medical
-        Question Answering
-      </div>
-      <div class="pub-authors">
-        Rafid Ahmed, Md. Faiyaz Abdullah Sayeedi, Fariha Anjum Shifa, Mir
-        Sazzat Hossain, Faria Iffat Reshma, <strong>Mahbub E Sobhani</strong>,
-        Md Fahim, Md Farhad Alam Bhuiyan
-      </div>
-      <div class="pub-metadata">
-        Committed to EACL 2027 (via ARR) | Conference Paper
-      </div>
-    </div>
-
+    <!-- Under review conferences -->
     <div class="publication conf">
       <span class="pub-badge bg-warning text-dark">ARR</span>
       <span class="pub-badge bg-secondary">Under Review</span>
